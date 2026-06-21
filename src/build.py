@@ -77,7 +77,7 @@ def generate_index_html(articles, config):
           <h2 class="album-title">{title}</h2>
           <div class="album-meta">
             <time datetime="{article.get('date', '')}">{date}</time>
-            <span class="album-count">{total} 张照片</span>
+            <span class="album-count">{total} 张图片</span>
           </div>
         </div>
       </a>
@@ -153,7 +153,7 @@ def generate_album_html(article, config):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{title} - {site_name}</title>
-  <meta name="description" content="{title}，共{total}张照片">
+  <meta name="description" content="{title}，共{total}张图片">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/style.css">
@@ -178,7 +178,7 @@ def generate_album_html(article, config):
           <h1 class="album-title">{title}</h1>
           <div class="album-meta">
             <time datetime="{article.get('date', '')}">{date}</time>
-            <span class="album-count">{total} 张照片</span>
+            <span class="album-count">{total} 张图片</span>
             <a href="{blog_url}" class="blog-link" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </div>
