@@ -259,8 +259,16 @@ img {
 }
 
 .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 0.85rem;
   color: var(--text-muted);
+  text-decoration: none;
+}
+
+.back-icon {
+  flex-shrink: 0;
 }
 
 .back-link:hover {
@@ -275,10 +283,14 @@ img {
 
 .album-card-link--hero {
   cursor: default;
+  padding: 24px 20px;
+  gap: 12px;
 }
 
 .blog-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 8px 18px;
   background-color: #2A9D8F;
   color: #fff;
@@ -291,6 +303,10 @@ img {
 
 .blog-link:hover {
   opacity: 0.85;
+}
+
+.blog-icon {
+  flex-shrink: 0;
 }
 
 .album-card-link--hero .blog-link {

@@ -161,7 +161,7 @@ def generate_album_html(article, config):
 <body>
   <header class="album-detail-nav">
     <div class="container album-detail-nav-inner">
-      <a href="../../" class="back-link">← 返回相册</a>
+      <a href="../../" class="back-link"><svg class="back-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>返回相册</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
         <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
@@ -181,7 +181,7 @@ def generate_album_html(article, config):
             <span class="album-count">{total} 张图片</span>
           </div>
         </div>
-        <a href="{blog_url}" class="blog-link" target="_blank" rel="noopener">阅读原文 →</a>
+        <a href="{blog_url}" class="blog-link" target="_blank" rel="noopener"><svg class="blog-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a>
       </div>
     </article>
     <div class="photo-grid">
@@ -461,8 +461,16 @@ img {
 }
 
 .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 0.85rem;
   color: var(--text-muted);
+  text-decoration: none;
+}
+
+.back-icon {
+  flex-shrink: 0;
 }
 
 .back-link:hover {
@@ -477,10 +485,14 @@ img {
 
 .album-card-link--hero {
   cursor: default;
+  padding: 24px 20px;
+  gap: 12px;
 }
 
 .blog-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 8px 18px;
   background-color: #2A9D8F;
   color: #fff;
@@ -493,6 +505,10 @@ img {
 
 .blog-link:hover {
   opacity: 0.85;
+}
+
+.blog-icon {
+  flex-shrink: 0;
 }
 
 .album-card-link--hero .blog-link {
