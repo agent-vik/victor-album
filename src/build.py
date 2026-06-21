@@ -73,7 +73,7 @@ def generate_index_html(articles, config):
         cards_html += f'''    <article class="album-card">
       <a href="album/{slug}/" class="album-card-link">
         <div class="album-cover">
-          <img src="{cover}" alt="{title}" loading="lazy">
+          <div class="img-wrap"><img src="{cover}" alt="{title}" loading="lazy"></div>
         </div>
         <div class="album-info">
           <h2 class="album-title">{title}</h2>
@@ -147,7 +147,7 @@ def generate_album_html(article, config):
         src = img["src"]
         alt = escape_html(img["alt"])
         images_html += f'''      <figure class="photo-item">
-        <img src="{src}" alt="{alt}" loading="lazy">
+        <div class="img-wrap"><img src="{src}" alt="{alt}" loading="lazy"></div>
         {f'<figcaption>{alt}</figcaption>' if alt else ''}
       </figure>
 '''
@@ -181,7 +181,7 @@ def generate_album_html(article, config):
     <article class="album-card album-card--hero">
       <div class="album-card-link album-card-link--hero">
         <div class="album-cover">
-          <img src="{cover_img}" alt="{title}" loading="eager">
+          <div class="img-wrap"><img src="{cover_img}" alt="{title}" loading="eager"></div>
         </div>
         <div class="album-info">
           <h1 class="album-title">{title}</h1>
@@ -581,6 +581,63 @@ img {
   color: var(--text-secondary);
 }
 
+/* ===== Image Loading Shimmer ===== */
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+  background: var(--shimmer-bg, #e8e8e8);
+}
+
+.img-wrap img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-wrap img.is-loaded {
+  opacity: 1;
+}
+
+.img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--shimmer-highlight, rgba(255,255,255,0.4)) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite;
+  pointer-events: none;
+}
+
+.img-wrap.is-loaded::after {
+  display: none;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+[data-scheme=dark] .img-wrap {
+  --shimmer-bg: #2a2a2a;
+  --shimmer-highlight: rgba(255,255,255,0.08);
+}
+
+.album-preview .img-wrap {
+  aspect-ratio: 1;
+}
+
+.album-cover .img-wrap {
+  aspect-ratio: 3 / 2;
+}
+
+.photo-item .img-wrap {
+  aspect-ratio: auto;
+  min-height: 120px;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .album-preview {
@@ -793,6 +850,21 @@ def generate_js():
     }
   });
 })();
+
+// Image load shimmer fade-in
+document.querySelectorAll('.img-wrap img').forEach(function(img) {
+  var wrap = img.parentElement;
+  function reveal() {
+    img.classList.add('is-loaded');
+    wrap.classList.add('is-loaded');
+  }
+  if (img.complete) {
+    reveal();
+  } else {
+    img.addEventListener('load', reveal);
+    img.addEventListener('error', reveal);
+  }
+});
 
 // Pinterest-style masonry layout (PC only, mobile uses single column)
 (function() {

@@ -26,6 +26,21 @@
   });
 })();
 
+// Image load shimmer fade-in
+document.querySelectorAll('.img-wrap img').forEach(function(img) {
+  var wrap = img.parentElement;
+  function reveal() {
+    img.classList.add('is-loaded');
+    wrap.classList.add('is-loaded');
+  }
+  if (img.complete) {
+    reveal();
+  } else {
+    img.addEventListener('load', reveal);
+    img.addEventListener('error', reveal);
+  }
+});
+
 // Pinterest-style masonry layout (PC only, mobile uses single column)
 (function() {
   function layoutMasonry(grid) {
