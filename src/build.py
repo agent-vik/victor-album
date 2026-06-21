@@ -694,23 +694,27 @@ def generate_js():
       grid.appendChild(col);
     }
 
-    // Seed: put one item in each column first, then use shortest-column
-    items.forEach(function(item, index) {
-      if (index < numCols) {
-        cols[index].appendChild(item);
-        return;
-      }
+    // Temporarily make grid block-flow so items have natural height
+    grid.style.display = "block";
+    var colHeights = [];
+    for (var c = 0; c < numCols; c++) { colHeights.push(0); }
+    var gapSize = 12;
+
+    items.forEach(function(item) {
+      var h = item.offsetHeight;
       var shortest = 0;
-      var minH = cols[0].scrollHeight;
-      for (var c = 1; c < cols.length; c++) {
-        var h = cols[c].scrollHeight;
-        if (h < minH) {
-          minH = h;
+      var minH = colHeights[0];
+      for (var c = 1; c < numCols; c++) {
+        if (colHeights[c] < minH) {
+          minH = colHeights[c];
           shortest = c;
         }
       }
       cols[shortest].appendChild(item);
+      colHeights[shortest] += h + (colHeights[shortest] > 0 ? gapSize : 0);
     });
+
+    grid.style.display = "";
   }
 
   var grids = document.querySelectorAll(".photo-grid");
