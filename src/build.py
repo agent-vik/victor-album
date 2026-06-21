@@ -68,7 +68,7 @@ def generate_index_html(articles, config):
         for img in images[:preview_count]:
             src = img["src"]
             alt = escape_html(img["alt"])
-            preview_imgs += f'          <img src="{src}" alt="{alt}" loading="lazy">\n'
+            preview_imgs += f'          <div class="img-wrap"><img src="{src}" alt="{alt}" loading="lazy"></div>\n'
         
         cards_html += f'''    <article class="album-card">
       <a href="album/{slug}/" class="album-card-link">
