@@ -19,7 +19,9 @@
 | 5 | 部署到 GitHub Pages | ✅ |
 | 6 | 视觉对齐博客 Stack Theme | ✅ |
 | 7 | 移动端适配 & UI 细节打磨 | ✅ |
-| 8 | README 署名对齐博客仓库格式 | ⬜ 待 API 限流解除后处理 |
+| 8 | 真瀑布流布局（Pinterest 式） | ✅ |
+| 9 | 容器宽度 & 列数调整（1200px / 4列） | ✅ |
+| 10 | README 署名对齐博客仓库格式 | ⬜ 待 API 限流解除后处理 |
 
 ---
 
@@ -57,11 +59,23 @@ config.json → fetch_data.py → articles.json → build.py → 静态 HTML/CSS
 - 图片直接引用 CDN 原图：`cdn.victor42.work/posts/{YYYY-MM}/{文件名}`
 - 无需构建步骤，推送即部署
 
+### 布局规格
+
+| 项目 | 值 |
+|------|-----|
+| 容器最大宽度 | 1200px |
+| 容器水平内边距 | 20px |
+| PC 瀑布流列数 | 4 列（JS 动态分配到最短列） |
+| 移动端布局 | 单列自然流（无 masonry） |
+| 瀑布流间距 | 12px（列间） |
+| 首页预览网格 | PC 6列 / 平板 4列 / 手机 3列 |
+
 ### 技术特点
 
 - **纯静态**：Python 生成 HTML，无前端框架依赖
 - **零构建开销**：不需要 CI/CD，build.py 本地运行后直接 push
 - **CDN 原图**：图片已由博客压缩过（webp），直接引用无需生成缩略图
+- **真瀑布流**：JS 动态 Pinterest 式布局，round-robin 播种 + 最短列分配
 - **响应式**：PC / 平板 / 手机三档适配
 
 ---
@@ -157,6 +171,22 @@ config.json → fetch_data.py → articles.json → build.py → 静态 HTML/CSS
 - 详情页导航栏分隔线限制在 container 内
 - 阅读原文改为 accent 底色按钮，PC端右端居中 / 移动端下方居中
 - README 去掉相册列表，避免后续维护负担
+
+### v1.3 — 瀑布流 & 布局优化
+
+- 替换 CSS column-count（假瀑布流）为 JS 动态 Pinterest 式真瀑布流
+- 等待图片加载完成后布局，避免高度计算错误
+- 前 N 张图 round-robin 播种确保所有列都有内容
+- 移动端跳过 masonry，单列自然流直接显示
+- PC 端显示加载动画（SVG spinner），布局完成后移除
+- 详情页导航栏 padding 覆盖问题修复（简写→具体属性）
+- 统一卡片和照片卡片的背景色与阴影
+- 移动端 blog-link 特异性覆盖修复（`align-self: center`）
+- 暗色模式按钮颜色固定为 `#2A9D8F`（不随 theme variable 变化）
+- 返回相册 / 阅读原文箭头文字替换为 SVG 图标
+- Hero 卡片 padding 增大（32px 24px），元素间距收紧（gap 8px）
+- 容器最大宽度从 960px 扩大到 1200px
+- PC 端瀑布流列数从 2 列调整为 4 列
 
 ---
 
