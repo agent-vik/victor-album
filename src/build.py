@@ -582,7 +582,7 @@ img {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .album-preview {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   
 .photo-grid {
@@ -632,7 +632,7 @@ img {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .album-preview {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
   
   .photo-grid {
@@ -642,7 +642,7 @@ img {
 
 @media (min-width: 1025px) {
   .album-preview {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
   }
   
   .photo-grid {
