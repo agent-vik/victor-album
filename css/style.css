@@ -282,6 +282,22 @@ img {
 }
 
 .blog-link {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: opacity var(--transition);
+}
+
+.blog-link:hover {
+  opacity: 0.85;
+}
+
+.album-card-link--hero .blog-link {
   margin-left: auto;
 }
 
@@ -368,7 +384,8 @@ img {
   }
 
   .blog-link {
-    margin-left: 0;
+    margin-left: auto;
+    margin-top: 12px;
   }
 }
 

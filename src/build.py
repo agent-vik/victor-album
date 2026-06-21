@@ -179,9 +179,9 @@ def generate_album_html(article, config):
           <div class="album-meta">
             <time datetime="{article.get('date', '')}">{date}</time>
             <span class="album-count">{total} 张图片</span>
-            <a href="{blog_url}" class="blog-link" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </div>
+        <a href="{blog_url}" class="blog-link" target="_blank" rel="noopener">阅读原文 →</a>
       </div>
     </article>
     <div class="photo-grid">
@@ -484,6 +484,22 @@ img {
 }
 
 .blog-link {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: opacity var(--transition);
+}
+
+.blog-link:hover {
+  opacity: 0.85;
+}
+
+.album-card-link--hero .blog-link {
   margin-left: auto;
 }
 
@@ -570,7 +586,8 @@ img {
   }
 
   .blog-link {
-    margin-left: 0;
+    margin-left: auto;
+    margin-top: 12px;
   }
 }
 
