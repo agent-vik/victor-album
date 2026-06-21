@@ -346,10 +346,6 @@ img {
   box-shadow: var(--shadow-hover);
 }
 
-.album-card:hover {
-  box-shadow: var(--shadow-hover);
-}
-
 .album-card-link {
   display: flex;
   align-items: center;
@@ -524,7 +520,7 @@ img {
 .photo-item {
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--bg-secondary);
+  background: var(--bg-card);
   box-shadow: var(--shadow);
 }
 
@@ -599,7 +595,8 @@ img {
     padding: 16px;
   }
 
-  .blog-link {
+  .album-card-link--hero .blog-link {
+    margin-left: 0;
     margin-top: 12px;
     align-self: center;
   }
