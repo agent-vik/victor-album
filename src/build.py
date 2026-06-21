@@ -48,7 +48,7 @@ def escape_html(text):
 
 def generate_index_html(articles, config):
     """Generate the homepage with article list."""
-    site_name = config.get("site_name", "Victor Album")
+    site_name = config.get("site_name", "Victor42's Album")
     ga_head = '''  <script async src="https://www.googletagmanager.com/gtag/js?id=G-14SGRFWENB"></script>\n  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-14SGRFWENB');</script>'''
     cf_beacon = '''<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{\"version\":\"2024.11.0\",\"token\":\"a5a3e66d648b4ae8bc4356f1a342256e\",\"r\":1}' crossorigin="anonymous"></script>'''
     preview_count = config.get("preview_count", 24)
@@ -137,7 +137,7 @@ def generate_album_html(article, config):
     blog_url = article.get("url", "")
     images = article.get("images", [])
     total = len(images)
-    site_name = config.get("site_name", "Victor Album")
+    site_name = config.get("site_name", "Victor42's Album")
     ga_head = '''  <script async src="https://www.googletagmanager.com/gtag/js?id=G-14SGRFWENB"></script>\n  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-14SGRFWENB');</script>'''
     cf_beacon = '''<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{\"version\":\"2024.11.0\",\"token\":\"a5a3e66d648b4ae8bc4356f1a342256e\",\"r\":1}' crossorigin="anonymous"></script>'''
     
