@@ -269,6 +269,7 @@ img {
 
 .back-icon {
   flex-shrink: 0;
+  vertical-align: middle;
 }
 
 .back-link:hover {
@@ -307,6 +308,7 @@ img {
 
 .blog-icon {
   flex-shrink: 0;
+  vertical-align: middle;
 }
 
 .album-card-link--hero .blog-link {
