@@ -8,7 +8,7 @@ import time
 import os
 
 BLOG_BASE = "https://victor42.eth.limo"
-OUTPUT_DIR = "/home/z/my-project/agent-workspace/lab/victor-album/data"
+OUTPUT_DIR = "/tmp/victor-album/src/data"
 
 ARTICLES = [
     {"slug": "trip-to-xi-an", "title": "西安初夏休闲6天5夜"},

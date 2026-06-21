@@ -63,7 +63,7 @@ victor-album/
 │   └── data/
 │       └── articles.json       # 抓取到的图片数据
 ├── .gitignore
-├── NOTES.md                     # 本文档
+├── notes.md                     # 本文档
 └── README.md                    # 仓库说明
 ```
 
@@ -101,7 +101,7 @@ victor-album/
 | 暗色 Accent 文字 | `#ecf0f1` |
 | 字体 | Lato（Google Fonts，300/400/700） |
 | CJK 字体回退 | Noto Sans SC → PingFang SC → Microsoft YaHei |
-| 圆角 | `var(--radius): 8px` |
+| 圆角 | `var(--radius): 10px` |
 | 阴影 | `0 2px 8px rgba(0,0,0,0.08)` / hover `0 4px 16px` |
 | 亮暗切换 | `[data-scheme="dark"]` 选择器 + localStorage |
 
