@@ -1,29 +1,36 @@
 :root {
-  --bg: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --bg-card: #ffffff;
-  --text: #333333;
-  --text-secondary: #666666;
-  --text-muted: #999999;
-  --border: #e8e8e8;
-  --accent: #3b82f6;
+  --bg: #f5f5fa;
+  --bg-secondary: #ededf2;
+  --bg-card: #fff;
+  --text: #000;
+  --text-secondary: #747474;
+  --text-muted: #bababa;
+  --border: rgba(218,218,218,0.5);
+  --accent: #2A9D8F;
+  --accent-darker: #219789;
+  --accent-text: #fff;
   --shadow: 0 2px 8px rgba(0,0,0,0.08);
   --shadow-hover: 0 4px 16px rgba(0,0,0,0.12);
-  --radius: 8px;
+  --radius: 10px;
   --transition: 0.25s ease;
-  --font-main: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sys: -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue";
+  --font-zh: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
+  --font-main: "Lato", var(--font-sys), var(--font-zh), sans-serif;
 }
 
-[data-scheme="dark"] {
-  --bg: #181818;
-  --bg-secondary: #1e1e1e;
-  --bg-card: #242424;
-  --text: #e0e0e0;
-  --text-secondary: #aaaaaa;
-  --text-muted: #777777;
-  --border: #333333;
-  --shadow: 0 2px 8px rgba(0,0,0,0.3);
-  --shadow-hover: 0 4px 16px rgba(0,0,0,0.4);
+[data-scheme=dark] {
+  --bg: #303030;
+  --bg-secondary: #3a3a3a;
+  --bg-card: #424242;
+  --text: rgba(255,255,255,0.9);
+  --text-secondary: rgba(255,255,255,0.7);
+  --text-muted: rgba(255,255,255,0.5);
+  --border: rgba(255,255,255,0.12);
+  --accent: #ecf0f1;
+  --accent-darker: #bdc3c7;
+  --accent-text: #000;
+  --shadow: 0 2px 8px rgba(0,0,0,0.25);
+  --shadow-hover: 0 4px 16px rgba(0,0,0,0.35);
 }
 
 *, *::before, *::after {
@@ -120,8 +127,8 @@ img {
 
 .icon-moon { display: none; }
 .icon-sun { display: block; }
-[data-scheme="dark"] .icon-moon { display: block; }
-[data-scheme="dark"] .icon-sun { display: none; }
+[data-scheme=dark] .icon-moon { display: block; }
+[data-scheme=dark] .icon-sun { display: none; }
 
 /* ===== Album Cards (Homepage) ===== */
 .album-card {

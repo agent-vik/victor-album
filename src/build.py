@@ -8,7 +8,7 @@ import shutil
 from datetime import datetime
 from urllib.parse import quote
 
-PROJECT_DIR = "/home/z/my-project/agent-workspace/lab/victor-album"
+PROJECT_DIR = "/tmp/victor-album"
 SRC_DIR = os.path.join(PROJECT_DIR, "src")
 DATA_DIR = os.path.join(SRC_DIR, "data")
 DIST_DIR = PROJECT_DIR  # Output to project root for GitHub Pages
@@ -186,31 +186,38 @@ def generate_album_html(article, config):
 def generate_css():
     """Generate the stylesheet matching the blog's visual style."""
     return ''':root {
-  --bg: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --bg-card: #ffffff;
-  --text: #333333;
-  --text-secondary: #666666;
-  --text-muted: #999999;
-  --border: #e8e8e8;
-  --accent: #3b82f6;
+  --bg: #f5f5fa;
+  --bg-secondary: #ededf2;
+  --bg-card: #fff;
+  --text: #000;
+  --text-secondary: #747474;
+  --text-muted: #bababa;
+  --border: rgba(218,218,218,0.5);
+  --accent: #2A9D8F;
+  --accent-darker: #219789;
+  --accent-text: #fff;
   --shadow: 0 2px 8px rgba(0,0,0,0.08);
   --shadow-hover: 0 4px 16px rgba(0,0,0,0.12);
-  --radius: 8px;
+  --radius: 10px;
   --transition: 0.25s ease;
-  --font-main: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sys: -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue";
+  --font-zh: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
+  --font-main: "Lato", var(--font-sys), var(--font-zh), sans-serif;
 }
 
-[data-scheme="dark"] {
-  --bg: #181818;
-  --bg-secondary: #1e1e1e;
-  --bg-card: #242424;
-  --text: #e0e0e0;
-  --text-secondary: #aaaaaa;
-  --text-muted: #777777;
-  --border: #333333;
-  --shadow: 0 2px 8px rgba(0,0,0,0.3);
-  --shadow-hover: 0 4px 16px rgba(0,0,0,0.4);
+[data-scheme=dark] {
+  --bg: #303030;
+  --bg-secondary: #3a3a3a;
+  --bg-card: #424242;
+  --text: rgba(255,255,255,0.9);
+  --text-secondary: rgba(255,255,255,0.7);
+  --text-muted: rgba(255,255,255,0.5);
+  --border: rgba(255,255,255,0.12);
+  --accent: #ecf0f1;
+  --accent-darker: #bdc3c7;
+  --accent-text: #000;
+  --shadow: 0 2px 8px rgba(0,0,0,0.25);
+  --shadow-hover: 0 4px 16px rgba(0,0,0,0.35);
 }
 
 *, *::before, *::after {
@@ -307,8 +314,8 @@ img {
 
 .icon-moon { display: none; }
 .icon-sun { display: block; }
-[data-scheme="dark"] .icon-moon { display: block; }
-[data-scheme="dark"] .icon-sun { display: none; }
+[data-scheme=dark] .icon-moon { display: block; }
+[data-scheme=dark] .icon-sun { display: none; }
 
 /* ===== Album Cards (Homepage) ===== */
 .album-card {
@@ -585,9 +592,15 @@ def main():
     config = load_json(CONFIG_PATH)
     articles = load_json(os.path.join(DATA_DIR, "articles.json"))
     
-    # Clean dist
-    if os.path.exists(DIST_DIR):
-        shutil.rmtree(DIST_DIR)
+    # Clean only generated output files (preserve .git, src, README, etc.)
+    for d in ["css", "js", "album"]:
+        p = os.path.join(DIST_DIR, d)
+        if os.path.exists(p):
+            shutil.rmtree(p)
+    for f in ["index.html"]:
+        p = os.path.join(DIST_DIR, f)
+        if os.path.exists(p):
+            os.remove(p)
     
     # Create directory structure
     os.makedirs(os.path.join(DIST_DIR, "css"), exist_ok=True)
