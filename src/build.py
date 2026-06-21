@@ -273,7 +273,7 @@ img {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -686,7 +686,7 @@ def generate_js():
 
     if (grid.querySelector(".photo-col")) return;
 
-    var numCols = 2;
+    var numCols = 4;
     var cols = [];
     for (var c = 0; c < numCols; c++) {
       var col = document.createElement("div");
