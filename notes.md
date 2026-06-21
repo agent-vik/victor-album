@@ -44,8 +44,6 @@ config.json → fetch_data.py → articles.json → build.py → 静态 HTML/CSS
 
 ## 4. 文件结构
 
-### 4.1 完整目录结构
-
 ```
 victor-album/
 ├── css/
@@ -67,21 +65,11 @@ victor-album/
 └── README.md                    # 仓库说明
 ```
 
-### 4.2 关键文件说明
+**配置**: `src/config.json`（文章列表、slug、标题、博客 URL、预览数量）和 `src/data/articles.json`（抓取的图片数据）
 
-**配置**:
-- `src/config.json`: 文章列表（slug、标题、博客 URL、预览数量）
-- `src/data/articles.json`: 抓取的图片数据（URL、alt 文本）
+**构建**: `src/fetch_data.py` 解析博客 HTML 提取图片；`src/build.py` 包含 CSS/HTML/JS 模板，生成全部页面
 
-**构建**:
-- `src/fetch_data.py`: 解析博客 HTML 提取图片，输出 articles.json
-- `src/build.py`: 包含 CSS 模板、HTML 模板、JS 模板，生成全部页面
-
-**生成产物**:
-- `css/style.css`: 全局样式
-- `js/main.js`: 主题切换 + 瀑布流 + Lightbox
-- `index.html`: 首页列表页
-- `album/{slug}/index.html`: 各详情页
+**产物**: `index.html`（首页）、`album/{slug}/index.html`（详情页）、`css/style.css`、`js/main.js`
 
 ---
 
@@ -98,19 +86,3 @@ PC 端使用 JS 实现真正的 Pinterest 式瀑布流（4 列，按最短列分
 ### 5.3 Lightbox
 
 动态创建全屏遮罩 DOM，点击图片放大查看。支持键盘方向键、移动端 touch swipe 前后切换。由于瀑布流布局会重建 DOM，通过 MutationObserver 等待布局完成后再绑定点击事件。
-
----
-
-## 6. 入选文章
-
-| # | 标题 | Slug | 图片数 |
-|---|------|------|--------|
-| 1 | 西安初夏休闲6天5夜 | trip-to-xi-an | 162 |
-| 2 | 西双版纳景洪春季休闲6天5夜 | trip-to-xishuangbanna | 155 |
-| 3 | 珠海澳门春节9天8夜 | trip-to-zhuhai-and-macao | 91 |
-| 4 | 敦煌自驾5天4夜 | 3596 | 129 |
-| 5 | 北京4天5夜 | 3580 | 132 |
-| 6 | 蒙西宁夏国庆小众自驾6天5夜 | inner-mongolia-north-ningxia-self-driving-tour | 41 |
-| 7 | 敦煌二刷遛娃5天4夜 | a-revisit-to-dunhuang | 44 |
-| 8 | 纯净的海 | 1870 | 44 |
-| | **合计** | **798 张图片** |
