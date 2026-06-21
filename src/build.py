@@ -460,7 +460,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -586,7 +587,6 @@ img {
   }
 
   .blog-link {
-    margin-left: auto;
     margin-top: 12px;
   }
 }
