@@ -81,9 +81,11 @@ def generate_index_html(articles, config):
           </div>
         </div>
       </a>
-      <div class="album-preview">
-{preview_imgs.rstrip()}      </div>
-      <a href="album/{slug}/" class="album-more">查看全部 →</a>
+      <div class="album-preview-wrap">
+        <div class="album-preview">
+{preview_imgs.rstrip()}        </div>
+        <a href="album/{slug}/" class="album-more">查看全部 →</a>
+      </div>
     </article>
 '''
 
@@ -416,19 +418,32 @@ img {
   border-radius: 2px;
 }
 
+.album-preview-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
 .album-more {
-  display: block;
-  text-align: center;
-  padding: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 40px 0 12px;
   color: var(--accent);
   font-size: 0.9rem;
-  border-top: 1px solid var(--border);
-  transition: background-color var(--transition);
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(to bottom, transparent, var(--bg-card) 60%);
+  transition: padding var(--transition);
 }
 
 .album-more:hover {
-  background-color: var(--bg-secondary);
+  color: var(--accent-darker, var(--accent));
   opacity: 1;
+  padding: 48px 0 12px;
 }
 
 /* ===== Album Detail Page ===== */
