@@ -10,10 +10,18 @@
   <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-  <header class="album-detail-header">
-    <div class="container">
+  <header class="album-detail-nav">
+    <div class="container album-detail-nav-inner">
       <a href="../../" class="back-link">← 返回相册</a>
-      <div class="album-card album-card--detail">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+  <main class="container">
+    <article class="album-card album-card--hero">
+      <div class="album-card-link album-card-link--hero">
         <div class="album-cover">
           <img src="https://cdn.victor42.work/posts/2019-09/2019-09-20-23-20-16.jpg" alt="北京4天5夜" loading="eager">
         </div>
@@ -26,13 +34,8 @@
           </div>
         </div>
       </div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-      </button>
-    </div>
-  </header>
-  <main class="container photo-grid">
+    </article>
+    <div class="photo-grid">
       <figure class="photo-item">
         <img src="https://cdn.victor42.work/posts/2019-09/2019-09-19-20-51-02.jpg" alt="北京老城历史规划分区及四重城墙示意图" loading="lazy">
         <figcaption>北京老城历史规划分区及四重城墙示意图</figcaption>
@@ -561,6 +564,7 @@
         <img src="https://cdn.victor42.work/posts/2019-09/2019-09-20-23-48-13.jpg" alt="作者右脚后跟上贴着创可贴和磨出大水泡的近照" loading="lazy">
         <figcaption>作者右脚后跟上贴着创可贴和磨出大水泡的近照</figcaption>
       </figure>
+    </div>
   </main>
   <footer class="site-footer">
     <div class="container">

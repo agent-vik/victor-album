@@ -203,10 +203,6 @@ img {
   flex-wrap: wrap;
 }
 
-.album-card--detail .album-meta {
-  margin-top: 4px;
-}
-
 /* ===== Preview Grid ===== */
 .album-preview {
   display: grid;
@@ -250,22 +246,20 @@ img {
   padding: 48px 0 12px;
 }
 
-/* ===== Album Detail Page ===== */
-.album-detail-header {
+/* ===== Album Detail Nav ===== */
+.album-detail-nav {
   position: sticky;
   top: 0;
   z-index: 10;
   background-color: var(--bg);
-  padding: 16px 0 12px;
-  margin-bottom: 24px;
   border-bottom: 1px solid var(--border);
 }
 
-.album-detail-header .container {
+.album-detail-nav-inner {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  justify-content: space-between;
+  padding: 12px 0;
 }
 
 .back-link {
@@ -277,9 +271,14 @@ img {
   color: var(--accent);
 }
 
-.album-card--detail {
-  flex: 1;
-  min-width: 280px;
+/* ===== Album Hero Card (detail page) ===== */
+.album-card--hero {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.album-card-link--hero {
+  cursor: default;
 }
 
 .blog-link {
@@ -362,9 +361,10 @@ img {
     text-align: center;
   }
 
-  .album-detail-header .container {
+  .album-card-link--hero {
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
+    padding: 16px;
   }
 
   .blog-link {

@@ -145,6 +145,8 @@ def generate_album_html(article, config):
       </figure>
 '''
     
+    cover_img = article.get("cover", "") or (images[0]["src"] if images else "")
+    
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN" data-scheme="light">
 <head>
@@ -157,12 +159,20 @@ def generate_album_html(article, config):
   <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-  <header class="album-detail-header">
-    <div class="container">
+  <header class="album-detail-nav">
+    <div class="container album-detail-nav-inner">
       <a href="../../" class="back-link">← 返回相册</a>
-      <div class="album-card album-card--detail">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+  <main class="container">
+    <article class="album-card album-card--hero">
+      <div class="album-card-link album-card-link--hero">
         <div class="album-cover">
-          <img src="{article.get("cover", "") or (images[0]["src"] if images else "")}" alt="{title}" loading="eager">
+          <img src="{cover_img}" alt="{title}" loading="eager">
         </div>
         <div class="album-info">
           <h1 class="album-title">{title}</h1>
@@ -173,14 +183,10 @@ def generate_album_html(article, config):
           </div>
         </div>
       </div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-      </button>
-    </div>
-  </header>
-  <main class="container photo-grid">
-{images_html}  </main>
+    </article>
+    <div class="photo-grid">
+{images_html}    </div>
+  </main>
   <footer class="site-footer">
     <div class="container">
       <p>© 2011 - 2026 <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a></p>
@@ -399,10 +405,6 @@ img {
   flex-wrap: wrap;
 }
 
-.album-card--detail .album-meta {
-  margin-top: 4px;
-}
-
 /* ===== Preview Grid ===== */
 .album-preview {
   display: grid;
@@ -446,22 +448,20 @@ img {
   padding: 48px 0 12px;
 }
 
-/* ===== Album Detail Page ===== */
-.album-detail-header {
+/* ===== Album Detail Nav ===== */
+.album-detail-nav {
   position: sticky;
   top: 0;
   z-index: 10;
   background-color: var(--bg);
-  padding: 16px 0 12px;
-  margin-bottom: 24px;
   border-bottom: 1px solid var(--border);
 }
 
-.album-detail-header .container {
+.album-detail-nav-inner {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  justify-content: space-between;
+  padding: 12px 0;
 }
 
 .back-link {
@@ -473,9 +473,14 @@ img {
   color: var(--accent);
 }
 
-.album-card--detail {
-  flex: 1;
-  min-width: 280px;
+/* ===== Album Hero Card (detail page) ===== */
+.album-card--hero {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.album-card-link--hero {
+  cursor: default;
 }
 
 .blog-link {
@@ -558,9 +563,10 @@ img {
     text-align: center;
   }
 
-  .album-detail-header .container {
+  .album-card-link--hero {
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
+    padding: 16px;
   }
 
   .blog-link {
