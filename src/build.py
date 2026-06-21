@@ -113,7 +113,7 @@ def generate_index_html(articles, config):
 {cards_html}  </main>
   <footer class="site-footer">
     <div class="container">
-      <p>© 2011 - 2026 Victor42</p>
+      <p>© 2011 - 2026 <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a></p>
     </div>
   </footer>
   <script src="js/main.js"></script>
@@ -174,7 +174,7 @@ def generate_album_html(article, config):
 {images_html}  </main>
   <footer class="site-footer">
     <div class="container">
-      <p>© 2011 - 2026 Victor42</p>
+      <p>© 2011 - 2026 <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a></p>
     </div>
   </footer>
   <script src="../../js/main.js"></script>
