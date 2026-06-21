@@ -49,6 +49,8 @@ def escape_html(text):
 def generate_index_html(articles, config):
     """Generate the homepage with article list."""
     site_name = config.get("site_name", "Victor Album")
+    ga_head = '''  <script async src="https://www.googletagmanager.com/gtag/js?id=G-14SGRFWENB"></script>\n  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-14SGRFWENB');</script>'''
+    cf_beacon = '''<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{\"version\":\"2024.11.0\",\"token\":\"a5a3e66d648b4ae8bc4356f1a342256e\",\"r\":1}' crossorigin="anonymous"></script>'''
     preview_count = config.get("preview_count", 24)
     
     cards_html = ""
@@ -99,6 +101,7 @@ def generate_index_html(articles, config):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+{ga_head}
 </head>
 <body>
   <header class="site-header">
@@ -119,6 +122,7 @@ def generate_index_html(articles, config):
     </div>
   </footer>
   <script src="js/main.js"></script>
+{cf_beacon}
 </body>
 </html>'''
     
@@ -133,6 +137,8 @@ def generate_album_html(article, config):
     images = article.get("images", [])
     total = len(images)
     site_name = config.get("site_name", "Victor Album")
+    ga_head = '''  <script async src="https://www.googletagmanager.com/gtag/js?id=G-14SGRFWENB"></script>\n  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-14SGRFWENB');</script>'''
+    cf_beacon = '''<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{\"version\":\"2024.11.0\",\"token\":\"a5a3e66d648b4ae8bc4356f1a342256e\",\"r\":1}' crossorigin="anonymous"></script>'''
     
     # Masonry images
     images_html = ""
@@ -157,6 +163,7 @@ def generate_album_html(article, config):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/style.css">
+{ga_head}
 </head>
 <body>
   <header class="album-detail-nav">
@@ -193,6 +200,7 @@ def generate_album_html(article, config):
     </div>
   </footer>
   <script src="../../js/main.js"></script>
+{cf_beacon}
 </body>
 </html>'''
     
