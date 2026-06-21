@@ -486,8 +486,8 @@ img {
 
 .album-card-link--hero {
   cursor: default;
-  padding: 24px 20px;
-  gap: 12px;
+  padding: 32px 24px;
+  gap: 8px;
 }
 
 .blog-link {
@@ -622,7 +622,6 @@ img {
 
   .album-card-link--hero .blog-link {
     margin-left: 0;
-    margin-top: 12px;
     align-self: center;
   }
 }
