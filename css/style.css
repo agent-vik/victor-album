@@ -284,7 +284,7 @@ img {
 .blog-link {
   display: inline-block;
   padding: 8px 18px;
-  background-color: var(--accent);
+  background-color: #2A9D8F;
   color: #fff;
   border-radius: var(--radius);
   text-decoration: none;
@@ -399,6 +399,7 @@ img {
 
   .blog-link {
     margin-top: 12px;
+    align-self: center;
   }
 }
 
