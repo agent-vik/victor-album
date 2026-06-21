@@ -28,6 +28,8 @@ ARTICLES = [
     {"slug": "inner-mongolia-north-ningxia-self-driving-tour", "title": "\u8499\u897f\u5b81\u590f\u56fd\u5e86\u5c0f\u4f17\u81ea\u9a7e6\u59295\u591c"},
     {"slug": "a-revisit-to-dunhuang", "title": "\u6566\u714c\u4e8c\u5237\u9041\u5a015\u59294\u591c"},
     {"slug": "1870", "title": "\u7eaf\u51c0\u7684\u6d77"},
+    {"slug": "zhejiang-mapping-and-geoinformation-museum", "title": "\u6d59\u6c5f\u6d4b\u7ed8\u4e0e\u5730\u7406\u4fe1\u606f\u79d1\u6280\u535a\u7269\u9986"},
+    {"slug": "3617", "title": "\u6d59\u6c5f\u7701\u81ea\u7136\u535a\u7269\u9986\u5b89\u5409\u9986"},
 ]
 
 # Alt text keywords for non-photo content (stickers, memes, screenshots, tables)
