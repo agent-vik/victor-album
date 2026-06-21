@@ -303,13 +303,23 @@ img {
 
 /* ===== Photo Masonry Grid ===== */
 .photo-grid {
-  column-count: 2;
-  column-gap: 12px;
+  display: flex;
+  gap: 12px;
+  visibility: hidden;
+}
+
+.photo-grid.is-ready {
+  visibility: visible;
+}
+
+.photo-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .photo-item {
-  break-inside: avoid;
-  margin-bottom: 12px;
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--bg-secondary);
@@ -348,8 +358,12 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
   
-  .photo-grid {
-    column-count: 1;
+.photo-grid {
+    flex-direction: column;
+  }
+
+  .photo-col {
+    flex: none;
   }
   
   .album-card-link {
@@ -394,7 +408,7 @@ img {
   }
   
   .photo-grid {
-    column-count: 2;
+    flex-direction: row;
   }
 }
 
@@ -404,6 +418,6 @@ img {
   }
   
   .photo-grid {
-    column-count: 2;
+    flex-direction: row;
   }
 }

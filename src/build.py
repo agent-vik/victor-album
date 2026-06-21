@@ -505,13 +505,23 @@ img {
 
 /* ===== Photo Masonry Grid ===== */
 .photo-grid {
-  column-count: 2;
-  column-gap: 12px;
+  display: flex;
+  gap: 12px;
+  visibility: hidden;
+}
+
+.photo-grid.is-ready {
+  visibility: visible;
+}
+
+.photo-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .photo-item {
-  break-inside: avoid;
-  margin-bottom: 12px;
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--bg-secondary);
@@ -550,8 +560,12 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
   
-  .photo-grid {
-    column-count: 1;
+.photo-grid {
+    flex-direction: column;
+  }
+
+  .photo-col {
+    flex: none;
   }
   
   .album-card-link {
@@ -596,7 +610,7 @@ img {
   }
   
   .photo-grid {
-    column-count: 2;
+    flex-direction: row;
   }
 }
 
@@ -606,7 +620,7 @@ img {
   }
   
   .photo-grid {
-    column-count: 2;
+    flex-direction: row;
   }
 }
 '''
@@ -639,6 +653,80 @@ def generate_js():
       document.documentElement.dataset.scheme = e.matches ? "dark" : "light";
     }
   });
+})();
+
+// Pinterest-style masonry layout
+(function() {
+  function layoutMasonry(grid) {
+    var items = Array.from(grid.querySelectorAll(".photo-item"));
+    if (!items.length) return;
+
+    // Check if already laid out
+    if (grid.querySelector(".photo-col")) return;
+
+    var isMobile = window.innerWidth <= 768;
+    var numCols = isMobile ? 1 : 2;
+    var cols = [];
+    for (var c = 0; c < numCols; c++) {
+      var col = document.createElement("div");
+      col.className = "photo-col";
+      cols.push(col);
+    }
+
+    items.forEach(function(item) {
+      if (numCols === 1) {
+        cols[0].appendChild(item);
+        return;
+      }
+      var shortest = 0;
+      for (var c = 1; c < cols.length; c++) {
+        if (cols[c].offsetHeight < cols[shortest].offsetHeight) {
+          shortest = c;
+        }
+      }
+      cols[shortest].appendChild(item);
+    });
+
+    grid.innerHTML = "";
+    cols.forEach(function(col) { grid.appendChild(col); });
+  }
+
+  var grids = document.querySelectorAll(".photo-grid");
+  if (!grids.length) return;
+
+  // Wait for images to load before layout
+  var images = document.querySelectorAll(".photo-item img");
+  var loaded = 0;
+  var total = images.length;
+
+  if (total === 0) {
+    grids.forEach(layoutMasonry);
+    return;
+  }
+
+  function onReady() {
+    grids.forEach(layoutMasonry);
+    grids.forEach(function(g) { g.classList.add("is-ready"); });
+  }
+
+  images.forEach(function(img) {
+    if (img.complete) {
+      loaded++;
+      if (loaded === total) onReady();
+    } else {
+      img.addEventListener("load", function() {
+        loaded++;
+        if (loaded === total) onReady();
+      });
+      img.addEventListener("error", function() {
+        loaded++;
+        if (loaded === total) onReady();
+      });
+    }
+  });
+
+  // Fallback: layout after 3s even if some images fail
+  setTimeout(onReady, 3000);
 })();
 '''
 
