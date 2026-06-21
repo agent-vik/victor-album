@@ -158,11 +158,6 @@ img {
   opacity: 1;
 }
 
-.album-card-link:hover {
-  color: var(--text);
-  opacity: 1;
-}
-
 .album-cover {
   width: 120px;
   height: 67.5px;

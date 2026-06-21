@@ -360,11 +360,6 @@ img {
   opacity: 1;
 }
 
-.album-card-link:hover {
-  color: var(--text);
-  opacity: 1;
-}
-
 .album-cover {
   width: 120px;
   height: 67.5px;
@@ -760,7 +755,7 @@ img {
 '''
 
 def generate_js():
-    """Generate the JavaScript for theme toggle."""
+    """Generate the JavaScript: theme toggle, masonry layout, and lightbox."""
     return '''// Theme toggle
 (function() {
   const toggle = document.getElementById("themeToggle");
