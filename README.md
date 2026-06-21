@@ -1,10 +1,10 @@
-# 📷 Victor Album
+# Victor Album
 
-> A static photo gallery curated from [Victor42's travel blog](https://victor42.eth.limo).
+旅途中的光影记录 - 从博客游记中精选照片，以瀑布流相册的形式呈现。
 
-旅途中的光影记录 —— 从博客游记中精选照片，以瀑布流相册的形式呈现。
+A static photo gallery curated from [Victor42's travel blog](https://victor42.eth.limo).
 
-## 🌏 Gallery
+## Gallery
 
 | Album | Photos |
 |-------|--------:|
@@ -18,26 +18,26 @@
 | [纯净的海](https://agent-vik.github.io/victor-album/album/1870/) | 44 |
 | **Total** | **798** |
 
-## ✨ Features
+## Features
 
-- **Responsive masonry layout** — Waterfall photo grid that adapts to any screen size
-- **Dark / Light mode** — Toggle with auto system preference detection
-- **Image captions** — Preserves `alt` text from the original blog posts
-- **Zero dependencies** — Pure HTML, CSS, and vanilla JS
-- **CDN-hosted images** — All photos served via Cloudflare CDN from the blog
-- **Config-driven** — Add new albums by editing `config.json`
+- Responsive masonry layout with grid preview on homepage
+- Dark / Light mode toggle (auto system preference detection)
+- Image captions preserved from original blog post `alt` text
+- Zero dependencies - pure HTML, CSS, and vanilla JS
+- CDN-hosted images via Cloudflare
+- Config-driven: add new albums by editing `config.json`
 
-## 🛠 Technical
+## Technical
 
 | Aspect | Detail |
 |--------|--------|
-| **Source** | Blog: [victor42.eth.limo](https://victor42.eth.limo) (Hugo + IPFS + ENS) |
-| **Image CDN** | `cdn.victor42.work` (Cloudflare) |
+| **Source** | [victor42.eth.limo](https://victor42.eth.limo) (Hugo + IPFS + ENS) |
+| **Image CDN** | cdn.victor42.work (Cloudflare) |
 | **Font** | [Lato](https://fonts.google.com/specimen/Lato) (300/400/700) |
 | **Hosting** | GitHub Pages |
-| **Stack** | Python build scripts → static HTML/CSS/JS |
+| **Stack** | Python build scripts generates static HTML/CSS/JS |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── config.json          # Album list (editable — add/remove articles here)
@@ -55,21 +55,21 @@
 └── README.md
 ```
 
-## 🔄 Update Albums
+## Update Albums
 
 To add a new blog post to the gallery:
 
-1. Edit `config.json` — add the new article's slug, title, and URL
-2. Run `python3 fetch_data.py` — scrapes images from the blog post
-3. Run `python3 build.py` — regenerates all static pages
+1. Edit `config.json` - add the new article's slug, title, and URL
+2. Run `python3 fetch_data.py` - scrapes images from the blog post
+3. Run `python3 build.py` - regenerates all static pages
 4. Commit and push the updated `dist/` to GitHub Pages
 
-## 👤 About
+## About
 
 Built by [Agent Vik](https://github.com/agent-vik) for [Victor42](https://victor42.work/).
 
-Photos © Victor42. All rights reserved.
+Photos by Victor42. All rights reserved.
 
-## 📄 License
+## License
 
 MIT
