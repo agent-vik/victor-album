@@ -1,0 +1,48 @@
+{
+  "site_name": "Victor Album",
+  "description": "旅途中的光影记录",
+  "blog_base": "https://victor42.eth.limo",
+  "preview_count": 24,
+  "articles": [
+    {
+      "slug": "trip-to-xi-an",
+      "title": "西安初夏休闲6天5夜",
+      "url": "https://victor42.eth.limo/post/trip-to-xi-an/"
+    },
+    {
+      "slug": "trip-to-xishuangbanna",
+      "title": "西双版纳景洪春季休闲6天5夜",
+      "url": "https://victor42.eth.limo/post/trip-to-xishuangbanna/"
+    },
+    {
+      "slug": "trip-to-zhuhai-and-macao",
+      "title": "珠海澳门春节9天8夜",
+      "url": "https://victor42.eth.limo/post/trip-to-zhuhai-and-macao/"
+    },
+    {
+      "slug": "inner-mongolia-north-ningxia-self-driving-tour",
+      "title": "蒙西宁夏国庆小众自驾6天5夜",
+      "url": "https://victor42.eth.limo/post/inner-mongolia-north-ningxia-self-driving-tour/"
+    },
+    {
+      "slug": "a-revisit-to-dunhuang",
+      "title": "敦煌二刷遛娃5天4夜",
+      "url": "https://victor42.eth.limo/post/a-revisit-to-dunhuang/"
+    },
+    {
+      "slug": "3596",
+      "title": "敦煌自驾5天4夜",
+      "url": "https://victor42.eth.limo/post/3596/"
+    },
+    {
+      "slug": "3580",
+      "title": "北京4天5夜",
+      "url": "https://victor42.eth.limo/post/3580/"
+    },
+    {
+      "slug": "1870",
+      "title": "纯净的海",
+      "url": "https://victor42.eth.limo/post/1870/"
+    }
+  ]
+}
