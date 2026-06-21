@@ -308,6 +308,13 @@ img {
   visibility: visible;
 }
 
+.photo-grid-loader {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  color: var(--text-muted);
+}
+
 .photo-col {
   flex: 1;
   display: flex;

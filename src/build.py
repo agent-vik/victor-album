@@ -510,6 +510,13 @@ img {
   visibility: visible;
 }
 
+.photo-grid-loader {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  color: var(--text-muted);
+}
+
 .photo-col {
   flex: 1;
   display: flex;
@@ -659,13 +666,6 @@ def generate_js():
     var items = Array.from(grid.querySelectorAll(".photo-item"));
     if (!items.length) return;
 
-    // Skip on mobile: single column, natural flow
-    if (window.innerWidth <= 768) {
-      grid.classList.add("is-ready");
-      return;
-    }
-
-    // Skip if already laid out
     if (grid.querySelector(".photo-col")) return;
 
     var numCols = 2;
@@ -677,7 +677,6 @@ def generate_js():
       grid.appendChild(col);
     }
 
-    // Assign each photo to the shortest column (by scrollHeight, not offsetHeight)
     items.forEach(function(item) {
       var shortest = 0;
       for (var c = 1; c < cols.length; c++) {
@@ -692,7 +691,22 @@ def generate_js():
   var grids = document.querySelectorAll(".photo-grid");
   if (!grids.length) return;
 
-  // Wait for images to load before layout (so heights are correct)
+  var isMobile = window.innerWidth <= 768;
+
+  // Mobile: show immediately, no masonry needed
+  if (isMobile) {
+    grids.forEach(function(g) { g.classList.add("is-ready"); });
+    return;
+  }
+
+  // PC: show a loading spinner while images load
+  grids.forEach(function(grid) {
+    var spinner = document.createElement("div");
+    spinner.className = "photo-grid-loader";
+    spinner.innerHTML = '<svg viewBox="0 0 24 24" width="32" height="32"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.4 31.4" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></circle></svg>';
+    grid.parentNode.insertBefore(spinner, grid.nextSibling);
+  });
+
   var images = document.querySelectorAll(".photo-item img");
   var loaded = 0;
   var total = images.length;
@@ -700,6 +714,8 @@ def generate_js():
   function onReady() {
     grids.forEach(layoutMasonry);
     grids.forEach(function(g) { g.classList.add("is-ready"); });
+    var spinners = document.querySelectorAll(".photo-grid-loader");
+    spinners.forEach(function(s) { s.remove(); });
   }
 
   if (total === 0) {
@@ -723,7 +739,6 @@ def generate_js():
     }
   });
 
-  // Fallback: show after 3s even if some images fail to load
   setTimeout(onReady, 3000);
 })();
 '''
