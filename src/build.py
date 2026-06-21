@@ -454,7 +454,6 @@ img {
   top: 0;
   z-index: 10;
   background-color: var(--bg);
-  border-bottom: 1px solid var(--border);
 }
 
 .album-detail-nav-inner {
@@ -462,6 +461,7 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .back-link {
