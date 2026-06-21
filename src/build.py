@@ -510,6 +510,10 @@ img {
     flex-direction: column;
     text-align: center;
   }
+
+  .album-meta {
+    justify-content: center;
+  }
   
   .album-cover {
     width: 120px;
