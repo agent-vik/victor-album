@@ -69,7 +69,7 @@ def generate_index_html(articles, config):
             preview_imgs += f'          <img src="{src}" alt="{alt}" loading="lazy">\n'
         
         cards_html += f'''    <article class="album-card">
-      <a href="album/{slug}/" class="album-link">
+      <a href="album/{slug}/" class="album-card-link">
         <div class="album-cover">
           <img src="{cover}" alt="{title}" loading="lazy">
         </div>
@@ -155,14 +155,21 @@ def generate_album_html(article, config):
   <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-  <header class="site-header album-header">
+  <header class="album-detail-header">
     <div class="container">
       <a href="../../" class="back-link">← 返回相册</a>
-      <h1 class="album-page-title">{title}</h1>
-      <div class="album-page-meta">
-        <time datetime="{article.get('date', '')}">{date}</time>
-        <span class="album-count">{total} 张照片</span>
-        <a href="{blog_url}" class="blog-link" target="_blank" rel="noopener">阅读原文 →</a>
+      <div class="album-card album-card--detail">
+        <div class="album-cover">
+          <img src="{article.get("cover", "") or (images[0]["src"] if images else "")}" alt="{title}" loading="eager">
+        </div>
+        <div class="album-info">
+          <h1 class="album-title">{title}</h1>
+          <div class="album-meta">
+            <time datetime="{article.get('date', '')}">{date}</time>
+            <span class="album-count">{total} 张照片</span>
+            <a href="{blog_url}" class="blog-link" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </div>
       </div>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -317,9 +324,9 @@ img {
 [data-scheme=dark] .icon-moon { display: block; }
 [data-scheme=dark] .icon-sun { display: none; }
 
-/* ===== Album Cards (Homepage) ===== */
+/* ===== Album Card (shared by homepage & detail) ===== */
 .album-card {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -332,25 +339,33 @@ img {
   box-shadow: var(--shadow-hover);
 }
 
-.album-link {
+.album-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.album-card-link {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 20px 24px;
+  padding: 16px 20px;
   color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid var(--border);
 }
 
-.album-link:hover {
+.album-card-link:hover {
+  color: var(--text);
+  opacity: 1;
+}
+
+.album-card-link:hover {
   color: var(--text);
   opacity: 1;
 }
 
 .album-cover {
-  width: 80px;
-  height: 80px;
-  border-radius: 6px;
+  width: 120px;
+  height: 60px;
+  border-radius: 30px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -380,6 +395,10 @@ img {
   font-size: 0.85rem;
   color: var(--text-muted);
   flex-wrap: wrap;
+}
+
+.album-card--detail .album-meta {
+  margin-top: 4px;
 }
 
 /* ===== Preview Grid ===== */
@@ -413,17 +432,21 @@ img {
 }
 
 /* ===== Album Detail Page ===== */
-.album-header {
+.album-detail-header {
   position: sticky;
   top: 0;
   z-index: 10;
   background-color: var(--bg);
-  padding: 16px 0 !important;
-  margin-bottom: 24px !important;
+  padding: 16px 0 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
 }
 
-.album-header .container {
-  gap: 8px;
+.album-detail-header .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .back-link {
@@ -435,20 +458,9 @@ img {
   color: var(--accent);
 }
 
-.album-page-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.album-page-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  flex-wrap: wrap;
+.album-card--detail {
   flex: 1;
+  min-width: 280px;
 }
 
 .blog-link {
@@ -506,34 +518,36 @@ img {
     column-count: 1;
   }
   
-  .album-link {
+  .album-card-link {
     flex-direction: column;
     text-align: center;
+    padding: 16px;
+  }
+
+  .album-cover {
+    width: 160px;
+    height: 80px;
+    border-radius: 40px;
   }
 
   .album-meta {
     justify-content: center;
   }
-  
-  .album-cover {
-    width: 120px;
-    height: 120px;
-  }
-  
+
   .site-header .container {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .site-desc {
     text-align: center;
   }
-  
-  .album-page-meta {
+
+  .album-detail-header .container {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .blog-link {
     margin-left: 0;
   }
