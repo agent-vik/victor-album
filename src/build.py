@@ -372,8 +372,8 @@ img {
 
 .album-cover {
   width: 120px;
-  height: 60px;
-  border-radius: 30px;
+  height: 67.5px;
+  border-radius: 34px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -546,8 +546,8 @@ img {
 
   .album-cover {
     width: 160px;
-    height: 80px;
-    border-radius: 40px;
+    height: 90px;
+    border-radius: 45px;
   }
 
   .album-meta {
