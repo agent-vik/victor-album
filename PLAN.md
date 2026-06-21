@@ -21,7 +21,8 @@
 | 7 | 移动端适配 & UI 细节打磨 | ✅ |
 | 8 | 真瀑布流布局（Pinterest 式） | ✅ |
 | 9 | 容器宽度 & 列数调整（1200px / 4列） | ✅ |
-| 10 | README 署名对齐博客仓库格式 | ⬜ 待 API 限流解除后处理 |
+| 10 | Lightbox 大图查看（点击放大 + 前后切换） | ✅ |
+| 11 | README 署名对齐博客仓库格式 | ⬜ 待 API 限流解除后处理 |
 
 ---
 
@@ -113,6 +114,7 @@ config.json → fetch_data.py → articles.json → build.py → 静态 HTML/CSS
 - 顶部 sticky 导航栏（返回链接 + 主题切换）
 - Hero 卡片（与首页共享卡片组件：胶囊封面 + 标题 + 日期 + 图片数量）
 - **阅读原文按钮**（accent 底色，PC端在卡片右端居中，移动端在日期下方居中）
+- **Lightbox 大图查看**（点击放大，左右切换，键盘/滑动支持）
 - 瀑布流图片展示（PC 2列，移动端 1列）
 - 每张图片保留 alt 文本说明
 - 懒加载（首屏 eager，其余 lazy）
@@ -187,6 +189,16 @@ config.json → fetch_data.py → articles.json → build.py → 静态 HTML/CSS
 - Hero 卡片 padding 增大（32px 24px），元素间距收紧（gap 8px）
 - 容器最大宽度从 960px 扩大到 1200px
 - PC 端瀑布流列数从 2 列调整为 4 列
+
+### v1.4 — Lightbox 大图查看
+
+- 点击图片弹出全屏 lightbox 查看大图
+- 左右箭头按钮 + 键盘方向键前后切换
+- 移动端左右滑动切换（touch swipe）
+- 底部显示 figcaption 图片说明文字
+- 关闭方式：× 按钮 / 点击背景 / Esc 键
+- 图片卡片 cursor: pointer 提示可点击
+- PC 90vw×90vh / 移动端 95vw×85vh 自适应
 
 ---
 
