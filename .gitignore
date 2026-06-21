@@ -1,5 +1,4 @@
-node_modules/
-data/*.html
 __pycache__/
+data/*.html
+src/data/*.html
 *.pyc
-.DS_Store

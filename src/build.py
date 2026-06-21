@@ -9,9 +9,10 @@ from datetime import datetime
 from urllib.parse import quote
 
 PROJECT_DIR = "/home/z/my-project/agent-workspace/lab/victor-album"
-DATA_DIR = os.path.join(PROJECT_DIR, "data")
-DIST_DIR = os.path.join(PROJECT_DIR, "dist")
-CONFIG_PATH = os.path.join(PROJECT_DIR, "config.json")
+SRC_DIR = os.path.join(PROJECT_DIR, "src")
+DATA_DIR = os.path.join(SRC_DIR, "data")
+DIST_DIR = PROJECT_DIR  # Output to project root for GitHub Pages
+CONFIG_PATH = os.path.join(SRC_DIR, "config.json")
 
 def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
