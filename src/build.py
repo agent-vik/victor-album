@@ -694,10 +694,18 @@ def generate_js():
       grid.appendChild(col);
     }
 
-    items.forEach(function(item) {
+    // Seed: put one item in each column first, then use shortest-column
+    items.forEach(function(item, index) {
+      if (index < numCols) {
+        cols[index].appendChild(item);
+        return;
+      }
       var shortest = 0;
+      var minH = cols[0].scrollHeight;
       for (var c = 1; c < cols.length; c++) {
-        if (cols[c].scrollHeight < cols[shortest].scrollHeight) {
+        var h = cols[c].scrollHeight;
+        if (h < minH) {
+          minH = h;
           shortest = c;
         }
       }
