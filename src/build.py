@@ -656,58 +656,58 @@ def generate_js():
   });
 })();
 
-// Pinterest-style masonry layout
+// Pinterest-style masonry layout (PC only, mobile uses single column)
 (function() {
   function layoutMasonry(grid) {
     var items = Array.from(grid.querySelectorAll(".photo-item"));
     if (!items.length) return;
 
-    // Check if already laid out
+    // Skip on mobile: single column, natural flow
+    if (window.innerWidth <= 768) {
+      grid.classList.add("is-ready");
+      return;
+    }
+
+    // Skip if already laid out
     if (grid.querySelector(".photo-col")) return;
 
-    var isMobile = window.innerWidth <= 768;
-    var numCols = isMobile ? 1 : 2;
+    var numCols = 2;
     var cols = [];
     for (var c = 0; c < numCols; c++) {
       var col = document.createElement("div");
       col.className = "photo-col";
       cols.push(col);
+      grid.appendChild(col);
     }
 
+    // Assign each photo to the shortest column (by scrollHeight, not offsetHeight)
     items.forEach(function(item) {
-      if (numCols === 1) {
-        cols[0].appendChild(item);
-        return;
-      }
       var shortest = 0;
       for (var c = 1; c < cols.length; c++) {
-        if (cols[c].offsetHeight < cols[shortest].offsetHeight) {
+        if (cols[c].scrollHeight < cols[shortest].scrollHeight) {
           shortest = c;
         }
       }
       cols[shortest].appendChild(item);
     });
-
-    grid.innerHTML = "";
-    cols.forEach(function(col) { grid.appendChild(col); });
   }
 
   var grids = document.querySelectorAll(".photo-grid");
   if (!grids.length) return;
 
-  // Wait for images to load before layout
+  // Wait for images to load before layout (so heights are correct)
   var images = document.querySelectorAll(".photo-item img");
   var loaded = 0;
   var total = images.length;
 
-  if (total === 0) {
-    grids.forEach(layoutMasonry);
-    return;
-  }
-
   function onReady() {
     grids.forEach(layoutMasonry);
     grids.forEach(function(g) { g.classList.add("is-ready"); });
+  }
+
+  if (total === 0) {
+    onReady();
+    return;
   }
 
   images.forEach(function(img) {
@@ -726,7 +726,7 @@ def generate_js():
     }
   });
 
-  // Fallback: layout after 3s even if some images fail
+  // Fallback: show after 3s even if some images fail to load
   setTimeout(onReady, 3000);
 })();
 '''
