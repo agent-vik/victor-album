@@ -119,3 +119,99 @@
 
   setTimeout(onReady, 3000);
 })();
+
+// Lightbox
+(function() {
+  var lb = document.createElement("div");
+  lb.className = "lightbox";
+  lb.innerHTML = '<button class="lightbox-close">×</button>' +
+    '<button class="lightbox-nav lightbox-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>' +
+    '<button class="lightbox-nav lightbox-next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>' +
+    '<img src="" alt="" />' +
+    '<div class="lightbox-caption"></div>';
+  document.body.appendChild(lb);
+
+  var lbImg = lb.querySelector("img");
+  var lbCaption = lb.querySelector(".lightbox-caption");
+  var lbClose = lb.querySelector(".lightbox-close");
+  var lbPrev = lb.querySelector(".lightbox-prev");
+  var lbNext = lb.querySelector(".lightbox-next");
+
+  var allItems = [];
+  var currentIndex = 0;
+
+  function collectItems() {
+    allItems = [];
+    var items = document.querySelectorAll(".photo-item");
+    items.forEach(function(fig, i) {
+      var img = fig.querySelector("img");
+      var cap = fig.querySelector("figcaption");
+      if (img) {
+        allItems.push({ src: img.src, alt: img.alt, caption: cap ? cap.textContent : "" });
+        fig.addEventListener("click", function() { open(i); });
+      }
+    });
+  }
+
+  function open(index) {
+    currentIndex = index;
+    show(currentIndex);
+    lb.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function show(index) {
+    var item = allItems[index];
+    if (!item) return;
+    lbImg.src = item.src;
+    lbImg.alt = item.alt;
+    lbCaption.textContent = item.caption;
+    lbPrev.style.display = allItems.length > 1 ? "" : "none";
+    lbNext.style.display = allItems.length > 1 ? "" : "none";
+  }
+
+  function close() {
+    lb.classList.remove("is-open");
+    lbImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  function prev() {
+    currentIndex = (currentIndex - 1 + allItems.length) % allItems.length;
+    show(currentIndex);
+  }
+
+  function next() {
+    currentIndex = (currentIndex + 1) % allItems.length;
+    show(currentIndex);
+  }
+
+  lbClose.addEventListener("click", function(e) { e.stopPropagation(); close(); });
+  lbPrev.addEventListener("click", function(e) { e.stopPropagation(); prev(); });
+  lbNext.addEventListener("click", function(e) { e.stopPropagation(); next(); });
+  lb.addEventListener("click", function(e) { if (e.target === lb || e.target === lbImg) close(); });
+
+  document.addEventListener("keydown", function(e) {
+    if (!lb.classList.contains("is-open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") prev();
+    if (e.key === "ArrowRight") next();
+  });
+
+  var touchStartX = 0;
+  lb.addEventListener("touchstart", function(e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+  lb.addEventListener("touchend", function(e) {
+    var dx = e.changedTouches[0].screenX - touchStartX;
+    if (dx > 50) prev();
+    else if (dx < -50) next();
+  }, { passive: true });
+
+  var observer = new MutationObserver(function() {
+    if (document.querySelector(".photo-col")) {
+      observer.disconnect();
+      collectItems();
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+  setTimeout(collectItems, 3500);
+})();
