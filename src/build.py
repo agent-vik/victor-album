@@ -336,7 +336,6 @@ img {
 .album-card {
   margin-bottom: 24px;
   background: var(--bg-card);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
