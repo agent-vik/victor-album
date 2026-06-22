@@ -65,7 +65,7 @@ def generate_index_html(articles, config):
         
         # Preview images (grid)
         preview_imgs = ""
-        for img in images[:preview_count]:
+        for img in images[1:preview_count + 1]:
             src = img["src"]
             alt = escape_html(img["alt"])
             preview_imgs += f'          <div class="img-wrap"><img src="{src}" alt="{alt}" loading="lazy"></div>\n'
