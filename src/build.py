@@ -118,7 +118,7 @@ def generate_index_html(articles, config):
   <main class="container">
 {cards_html}  </main>
   <footer class="site-footer">
-    <p class="copyright">Created by <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a> | <a href="https://github.com/agent-vik/victor-album" target="_blank" rel="noopener">Code</a></p>
+    <p class="copyright">Created by <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a> & <a href="https://github.com/agent-vik/about-me" target="_blank" rel="noopener">Vik</a> | <a href="https://github.com/agent-vik/victor-album" target="_blank" rel="noopener">Code</a></p>
   </footer>
   <script src="js/main.js"></script>
 {cf_beacon}
@@ -195,7 +195,7 @@ def generate_album_html(article, config):
 {images_html}    </div>
   </main>
   <footer class="site-footer">
-    <p class="copyright">Created by <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a> | <a href="https://github.com/agent-vik/victor-album" target="_blank" rel="noopener">Code</a></p>
+    <p class="copyright">Created by <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a> & <a href="https://github.com/agent-vik/about-me" target="_blank" rel="noopener">Vik</a> | <a href="https://github.com/agent-vik/victor-album" target="_blank" rel="noopener">Code</a></p>
   </footer>
   <script src="../../js/main.js"></script>
 {cf_beacon}
