@@ -8,7 +8,7 @@ import shutil
 from datetime import datetime
 from urllib.parse import quote
 
-PROJECT_DIR = "/tmp/victor-album"
+PROJECT_DIR = "/home/z/my-project/victor-album"
 SRC_DIR = os.path.join(PROJECT_DIR, "src")
 DATA_DIR = os.path.join(SRC_DIR, "data")
 DIST_DIR = PROJECT_DIR  # Output to project root for GitHub Pages
@@ -118,9 +118,7 @@ def generate_index_html(articles, config):
   <main class="container">
 {cards_html}  </main>
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2011 - 2026 <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a></p>
-    </div>
+    <p class="copyright">Created by <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a> | <a href="https://github.com/agent-vik/victor-album" target="_blank" rel="noopener">Code</a></p>
   </footer>
   <script src="js/main.js"></script>
 {cf_beacon}
@@ -197,9 +195,7 @@ def generate_album_html(article, config):
 {images_html}    </div>
   </main>
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2011 - 2026 <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a></p>
-    </div>
+    <p class="copyright">Created by <a href="https://victor42.eth.limo" target="_blank" rel="noopener">Victor42</a> | <a href="https://github.com/agent-vik/victor-album" target="_blank" rel="noopener">Code</a></p>
   </footer>
   <script src="../../js/main.js"></script>
 {cf_beacon}
@@ -572,12 +568,15 @@ img {
   margin-top: 48px;
   padding: 24px 0;
   border-top: 1px solid var(--border);
-  color: var(--text-muted);
-  font-size: 0.85rem;
   text-align: center;
 }
 
-.site-footer a {
+.site-footer .copyright {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.site-footer .copyright a {
   color: var(--text-secondary);
 }
 

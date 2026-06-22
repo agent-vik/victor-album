@@ -360,12 +360,15 @@ img {
   margin-top: 48px;
   padding: 24px 0;
   border-top: 1px solid var(--border);
-  color: var(--text-muted);
-  font-size: 0.85rem;
   text-align: center;
 }
 
-.site-footer a {
+.site-footer .copyright {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.site-footer .copyright a {
   color: var(--text-secondary);
 }
 
