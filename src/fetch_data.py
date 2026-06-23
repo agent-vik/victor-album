@@ -8,7 +8,7 @@ import os
 import urllib.request
 
 BLOG_BASE = "https://victor42.eth.limo"
-OUTPUT_DIR = "/home/z/my-project/victor-album/src/data"
+OUTPUT_DIR = "/home/z/my-project/projects/victor-album/src/data"
 
 ARTICLES = [
     {"slug": "trip-to-xi-an", "title": "西安初夏休闲6天5夜"},

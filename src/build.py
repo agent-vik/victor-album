@@ -8,7 +8,7 @@ import shutil
 from datetime import datetime
 from urllib.parse import quote
 
-PROJECT_DIR = "/home/z/my-project/victor-album"
+PROJECT_DIR = "/home/z/my-project/projects/victor-album"
 SRC_DIR = os.path.join(PROJECT_DIR, "src")
 DATA_DIR = os.path.join(SRC_DIR, "data")
 DIST_DIR = PROJECT_DIR  # Output to project root for GitHub Pages
