@@ -240,7 +240,13 @@ img {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: var(--bg);
+  background: rgba(245, 245, 250, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+[data-scheme=dark] .album-detail-nav {
+  background: rgba(48, 48, 48, 0.75);
 }
 
 .album-detail-nav-inner {
