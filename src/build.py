@@ -351,6 +351,14 @@ img {
   box-shadow: var(--shadow-hover);
 }
 
+.album-card--hero {
+  cursor: default;
+}
+
+.album-card--hero:hover {
+  box-shadow: var(--shadow);
+}
+
 .album-card-link {
   display: flex;
   align-items: center;
