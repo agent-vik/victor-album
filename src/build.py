@@ -570,7 +570,6 @@ img {
 .site-footer {
   margin-top: 48px;
   padding: 24px 0;
-  border-top: 1px solid var(--border);
   text-align: center;
 }
 
