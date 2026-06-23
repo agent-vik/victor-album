@@ -284,7 +284,7 @@ img {
 .album-card-link--hero {
   cursor: default;
   padding: 32px 24px;
-  gap: 8px;
+  gap: 16px;
 }
 
 .blog-link {
