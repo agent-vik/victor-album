@@ -511,6 +511,7 @@ img {
 
 .blog-link:hover {
   opacity: 0.85;
+  color: #fff;
 }
 
 .blog-icon {
