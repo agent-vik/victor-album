@@ -20,9 +20,6 @@
 - 亮/暗主题切换（localStorage 持久化）
 - 响应式适配（PC / 平板 / 手机三档）
 - 视觉体系对齐博客 Stack Theme
-- 详情页吸顶导航带毛玻璃效果（`backdrop-filter: blur(10px)`）
-- 图片卡片 hover 上浮 + 阴影加深交互
-- 页脚风格：`Created by Victor42 & Vik | Code`
 
 ---
 
@@ -97,17 +94,11 @@ victor-album/
 
 对齐博客 Stack Theme 的设计系统。主色调 `#2A9D8F`，字体 Lato，亮暗双主题通过 CSS 变量 + `[data-scheme="dark"]` 选择器切换。所有样式定义集中在 `src/build.py` 的 `generate_css()` 中。
 
-### 5.3 页面结构
-
-- **首页**：站点标题 + 主题切换按钮，下方为胶囊封面卡片列表（每张卡片含封面缩略图、标题、日期、图片数量、预览网格、"阅读原文"胶囊按钮）
-- **详情页**：吸顶导航（毛玻璃效果）→ hero 信息卡片（封面 + 标题 + 日期 + 图片数 + 胶囊按钮）→ 瀑布流图片网格（带加载动画）
-- **页脚**：`Created by Victor42 & Vik | Code`，无分隔线
-
-### 5.4 瀑布流布局
+### 5.3 瀑布流布局
 
 PC 端使用 JS 实现真正的 Pinterest 式瀑布流（4 列，按最短列分配），移动端退化为单列自然流。图片加载期间网格 `height: 0; visibility: hidden`，加载完成后展开并显示布局。核心难点在于浏览器 DOM 操作是批量的，必须先用 `display: block` 让元素获得自然高度，再用 `offsetHeight` 预量后分配。
 
-### 5.5 Lightbox
+### 5.4 Lightbox
 
 动态创建全屏遮罩 DOM，点击图片放大查看。支持键盘方向键、移动端 touch swipe 前后切换。由于瀑布流布局会重建 DOM，通过 MutationObserver 等待布局完成后再绑定点击事件。
 
