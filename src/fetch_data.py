@@ -86,13 +86,18 @@ def extract_date(html):
 
 
 def extract_cover(html):
-    """Extract OG cover image."""
-    og_match = re.search(r'property=["\']og:image["\'][^>]*content=(https?://\S+)', html)
+    """Extract OG cover image. Handles both quoted and unquoted attributes."""
+    # Quoted: property="og:image" content="https://..."
+    og_match = re.search(r'property=["\']og:image["\'][^>]*content=["\']([^"\']+)["\']', html)
     if og_match:
         return og_match.group(1)
-    og_match2 = re.search(r'content=(https?://\S+)[^>]*property=["\']og:image["\']', html)
+    og_match2 = re.search(r'content=["\']([^"\']+)["\'][^>]*property=["\']og:image["\']', html)
     if og_match2:
         return og_match2.group(1)
+    # Unquoted: property="og:image" content=https://...
+    og_match3 = re.search(r'property=["\']og:image["\'][^>]*content=(https?://\S+)', html)
+    if og_match3:
+        return og_match3.group(1)
     return None
 
 
