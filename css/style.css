@@ -313,16 +313,21 @@ img {
   display: flex;
   gap: 12px;
   visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 
 .photo-grid.is-ready {
   visibility: visible;
+  height: auto;
+  overflow: visible;
 }
 
 .photo-grid-loader {
   display: flex;
   justify-content: center;
-  padding: 40px 0;
+  align-items: center;
+  padding: 80px 0;
   color: var(--text-muted);
 }
 

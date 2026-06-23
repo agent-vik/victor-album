@@ -521,16 +521,21 @@ img {
   display: flex;
   gap: 12px;
   visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 
 .photo-grid.is-ready {
   visibility: visible;
+  height: auto;
+  overflow: visible;
 }
 
 .photo-grid-loader {
   display: flex;
   justify-content: center;
-  padding: 40px 0;
+  align-items: center;
+  padding: 80px 0;
   color: var(--text-muted);
 }
 
@@ -919,7 +924,7 @@ document.querySelectorAll('.img-wrap img').forEach(function(img) {
     var spinner = document.createElement("div");
     spinner.className = "photo-grid-loader";
     spinner.innerHTML = '<svg viewBox="0 0 24 24" width="32" height="32"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="31.4 31.4" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></circle></svg>';
-    grid.parentNode.insertBefore(spinner, grid.nextSibling);
+    grid.parentNode.insertBefore(spinner, grid);
   });
 
   var images = document.querySelectorAll(".photo-item img");
