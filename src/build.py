@@ -558,6 +558,12 @@ img {
   background: var(--bg-card);
   box-shadow: var(--shadow);
   cursor: pointer;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.photo-item:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
 }
 
 .photo-item img {
