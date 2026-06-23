@@ -287,7 +287,6 @@ img {
 /* ===== Header ===== */
 .site-header {
   padding: 48px 0 32px;
-  border-bottom: 1px solid var(--border);
   margin-bottom: 32px;
 }
 
@@ -458,7 +457,6 @@ img {
   justify-content: space-between;
   padding-top: 12px;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
 }
 
 .back-link {
