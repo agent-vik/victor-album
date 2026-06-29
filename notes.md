@@ -31,7 +31,7 @@
 fetch_data.py → articles.json → build.py → 静态 HTML/CSS/JS
 ```
 
-手动触发：用户告知新文章 → 在 `src/fetch_data.py` 的 `ARTICLES` 列表中添加 slug → 运行 `fetch_data.py` → 运行 `build.py` → git push。
+手动触发：用户告知新文章 → 更新 `src/fetch_data.py` 中的 `ARTICLES` 列表 → 运行 `fetch_data.py` → 运行 `build.py` → git push。
 
 ### 3.2 部署
 
@@ -67,7 +67,7 @@ victor-album/
 └── README.md                      # 仓库说明
 ```
 
-**数据源**: `src/fetch_data.py` 中维护 slug 列表，标题、日期、封面均从博客 HTML 自动抓取
+**数据源**: `src/fetch_data.py` 中硬编码文章列表（slug + 标题），从博客 HTML 抓取数据
 
 **配置**: `src/config.json`（站点名称、描述、预览数量）
 
@@ -83,7 +83,6 @@ victor-album/
 
 使用 urllib 直连博客 IPFS 站点，解析 Hugo Stack 主题的 HTML 结构：
 
-- **标题**：从 `<title>` 标签提取，fallback 到 `og:title` meta
 - **封面图**：从 `<meta property="og:image" content="...">` 提取 OG 封面
 - **日期**：从 `<time datetime=...>` 提取（无引号属性格式）
 - **正文图片**：精确提取 `<section class=article-content>` 到 `<footer class=article-footer>` 之间的图片，排除头图和底部关联推荐（`related-content--wrapper`）
@@ -109,10 +108,10 @@ PC 端使用 JS 实现真正的 Pinterest 式瀑布流（4 列，按最短列分
 
 ### 6.1 新增文章
 
-1. 在 `src/fetch_data.py` 的 `ARTICLES` 列表中添加 slug
-2. 运行 `python3 src/fetch_data.py`（自动抓取标题、日期、封面、图片）
+1. 在 `src/fetch_data.py` 的 `ARTICLES` 列表中添加条目
+2. 运行 `python3 src/fetch_data.py`
 3. 运行 `python3 src/build.py`
-4. `git add -A && git commit -m "data: add {slug}" && git push origin main`
+4. `git add -A && git commit -m "data: add {title}" && git push origin main`
 
 ### 6.2 更新已有文章的图片/alt
 
