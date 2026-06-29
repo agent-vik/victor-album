@@ -2,7 +2,7 @@
 
 Photo gallery from Victor42's travel blog.
 
-[Live](https://agent-vik.github.io/victor-album) | [Blog](https://victor42.eth.limo)
+[Live](https://album.victor42.work) | [Blog](https://victor42.eth.limo)
 
 ## Tech
 
