@@ -17,7 +17,7 @@ ARTICLES = [
     {"slug": "3596", "title": "敦煌自驾5天4夜"},
     {"slug": "3580", "title": "北京4天5夜"},
     {"slug": "inner-mongolia-north-ningxia-self-driving-tour", "title": "蒙西宁夏国庆小众自驾6天5夜"},
-    {"slug": "a-revisit-to-dunhuang", "title": "敦煌二刷遁威5天4夜"},
+    {"slug": "a-revisit-to-dunhuang", "title": "敦煌二刷遛娃5天4夜"},
     {"slug": "1870", "title": "纯净的海"},
     {"slug": "zhejiang-surveying-mapping-and-geoinformation-museum", "title": "浙江测绘与地理信息科技博物馆"},
     {"slug": "3617", "title": "浙江省自然博物馆安吉馆"},
