@@ -10,19 +10,20 @@ import urllib.request
 BLOG_BASE = "https://victor42.eth.limo"
 OUTPUT_DIR = "/home/z/my-project/projects/victor-album/src/data"
 
+# Only slugs needed — title, date, cover are auto-fetched from the blog.
 ARTICLES = [
-    {"slug": "trip-to-xi-an", "title": "西安初夏休闲6天5夜"},
-    {"slug": "trip-to-xishuangbanna", "title": "西双版纳景洪春季休闲6天5夜"},
-    {"slug": "trip-to-zhuhai-and-macao", "title": "珠海澳门春节9天8夜"},
-    {"slug": "3596", "title": "敦煌自驾5天4夜"},
-    {"slug": "3580", "title": "北京4天5夜"},
-    {"slug": "inner-mongolia-north-ningxia-self-driving-tour", "title": "蒙西宁夏国庆小众自驾6天5夜"},
-    {"slug": "a-revisit-to-dunhuang", "title": "敦煌二刷遁威5天4夜"},
-    {"slug": "1870", "title": "纯净的海"},
-    {"slug": "zhejiang-surveying-mapping-and-geoinformation-museum", "title": "浙江测绘与地理信息科技博物馆"},
-    {"slug": "3617", "title": "浙江省自然博物馆安吉馆"},
-    {"slug": "trip-to-jinyun-xiandu", "title": "缙云仙都初夏周末3天2晚"},
-    {"slug": "trip-to-zhoushan", "title": "舟山朱家尖亲子自驾4天3晚"},
+    "trip-to-xi-an",
+    "trip-to-xishuangbanna",
+    "trip-to-zhuhai-and-macao",
+    "3596",
+    "3580",
+    "inner-mongolia-north-ningxia-self-driving-tour",
+    "a-revisit-to-dunhuang",
+    "1870",
+    "zhejiang-surveying-mapping-and-geoinformation-museum",
+    "3617",
+    "trip-to-jinyun-xiandu",
+    "trip-to-zhoushan",
 ]
 
 ALT_FILTER_KEYWORDS = [
@@ -87,6 +88,19 @@ def extract_date(html):
     return None
 
 
+def extract_title(html):
+    """Extract article title from <title> tag or og:title meta."""
+    # <title>标签
+    title_match = re.search(r'<title[^>]*>(.*?)</title>', html, re.DOTALL)
+    if title_match:
+        return title_match.group(1).strip()
+    # og:title (quoted)
+    og_match = re.search(r'property=["\']og:title["\'][^>]*content=["\']([^"\' ]+)["\' ]', html)
+    if og_match:
+        return og_match.group(1).strip()
+    return None
+
+
 def extract_cover(html):
     """Extract OG cover image. Handles both quoted and unquoted attributes."""
     # Quoted: property="og:image" content="https://..."
@@ -134,25 +148,26 @@ def main():
     results = []
     total_filtered = 0
 
-    for article in ARTICLES:
-        slug = article["slug"]
+    for slug in ARTICLES:
         url = f"{BLOG_BASE}/post/{slug}/"
-        print(f"\nFetching: {article['title']} ({url})")
+        print(f"\nFetching: {url}")
 
         html = read_url(url)
         if not html:
             print(f"  FAILED to fetch")
             results.append({
-                "slug": slug, "title": article["title"], "url": url,
+                "slug": slug, "title": slug, "url": url,
                 "date": None, "cover": None, "images": [], "image_count": 0,
                 "error": "fetch_failed"
             })
             continue
 
+        title = extract_title(html) or slug
         images = extract_section_images(html)
         date = extract_date(html)
         cover = extract_cover(html)
 
+        print(f"  Title: {title}")
         print(f"  Extracted {len(images)} images, filtering...")
         kept_images, filtered_count = filter_images(images)
         total_filtered += filtered_count
@@ -160,7 +175,7 @@ def main():
 
         result = {
             "slug": slug,
-            "title": article["title"],
+            "title": title,
             "url": url,
             "date": date,
             "cover": cover,
