@@ -8,7 +8,8 @@ import os
 import urllib.request
 
 BLOG_BASE = "https://victor42.eth.limo"
-OUTPUT_DIR = "/home/z/my-project/projects/victor-album/src/data"
+SRC_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.join(SRC_DIR, "data")
 
 # Only slugs needed — title, date, cover are auto-fetched from the blog.
 ARTICLES = [
