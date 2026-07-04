@@ -33,13 +33,12 @@ fetch_data.py → articles.json → build.py → 静态 HTML/CSS/JS
 
 手动触发：用户告知新文章 → 更新 `src/fetch_data.py` 中的 `ARTICLES` 列表 → 运行 `fetch_data.py` → 运行 `build.py` → git push。
 
-### 3.2 部署
+### 3.2 部署与 CDN
 
-- Cloudflare Pages 从 `main` 分支根目录自动部署
-- 自定义域名 `album.victor42.work`（CNAME 指向 Cloudflare Pages）
-- 图片直接引用 CDN 原图：`https://cdn.victor42.work/posts/{YYYY-MM}/{文件名}`
-- 图片已由博客压缩过（webp），直接引用无需生成缩略图
-- 推送即部署，构建在本地完成
+1. **本地构建**：Python 脚本生成全部静态 HTML/CSS/JS
+2. **GitHub 部署**：push → GitHub Actions（Jekyll 构建）→ GitHub Pages 托管为源站
+3. **Cloudflare 上线**：域名 `album.victor42.work` 在 Cloudflare 管理，通过代理（橙云）指向 GitHub Pages 源站，对外提供访问、边缘缓存和安全防护
+4. **图片 CDN**：图片直接引用 Cloudflare R2 源：`https://cdn.victor42.work/posts/{YYYY-MM}/{文件名}`，图片已由博客压缩过（webp），直接引用无需生成缩略图
 
 ---
 
@@ -67,13 +66,15 @@ victor-album/
 └── README.md                      # 仓库说明
 ```
 
-**数据源**: `src/fetch_data.py` 中维护 slug 列表，标题、日期、封面均从博客 HTML 自动抓取
+**数据源**: `src/fetch_data.py` 中维护 slug 列表（唯一文章来源），标题、日期、封面均从博客 HTML 自动抓取
 
-**配置**: `src/config.json`（站点名称、描述、预览数量）
+**配置**: `src/config.json`（站点名称、描述、博客地址、预览数量）
 
 **构建**: `src/fetch_data.py` 解析博客 HTML 提取图片；`src/build.py` 包含 CSS/HTML/JS 模板，生成全部页面
 
 **产物**: `index.html`（首页）、`album/{slug}/index.html`（详情页）、`css/style.css`、`js/main.js`
+
+**路径处理**: 脚本通过 `__file__` 动态推导项目路径，不依赖硬编码绝对路径，任意环境 clone 后可直接运行
 
 ---
 
@@ -122,4 +123,4 @@ PC 端使用 JS 实现真正的 Pinterest 式瀑布流（4 列，按最短列分
 
 - **Name**: Agent Vik
 - **Email**: agent-vik@victor42.work
-- 沙盒环境需在每次会话开始时执行 `git config --global` 配置
+- 沙盒环境需在每次会话开始时执行 `git config` 配置（注意 `HOME=/tmp` 前缀）
