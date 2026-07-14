@@ -2,5 +2,7 @@
   "site_name": "Victor42's Album",
   "description": "旅途中的光影记录",
   "blog_base": "https://victor42.eth.limo",
-  "preview_count": 24
+  "preview_count": 24,
+  "ga_id": "G-14SGRFWENB",
+  "cf_beacon_token": "a5a3e66d648b4ae8bc4356f1a342256e"
 }
