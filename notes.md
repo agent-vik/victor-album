@@ -56,7 +56,7 @@ victor-album/
 │   │   └── index.html             # 各游记详情页（由 build.py 生成）
 │   └── ...
 ├── src/
-│   ├── config.json                # 站点配置（站点名称、描述、预览数量）
+│   ├── config.json                # 站点配置（站点名称、描述、博客地址、预览数量、GA ID、CF beacon token）
 │   ├── fetch_data.py              # 从博客抓取图片数据
 │   ├── build.py                   # 核心构建脚本（CSS + HTML + JS 模板）
 │   └── data/
@@ -68,7 +68,7 @@ victor-album/
 
 **数据源**: `src/fetch_data.py` 中维护 slug 列表（唯一文章来源），标题、日期、封面均从博客 HTML 自动抓取
 
-**配置**: `src/config.json`（站点名称、描述、博客地址、预览数量）
+**配置**: `src/config.json`（站点名称、描述、博客地址、预览数量、Google Analytics ID、Cloudflare beacon token）
 
 **构建**: `src/fetch_data.py` 解析博客 HTML 提取图片；`src/build.py` 包含 CSS/HTML/JS 模板，生成全部页面
 
@@ -82,19 +82,18 @@ victor-album/
 
 ### 5.1 数据抓取（fetch_data.py）
 
-使用 urllib 直连博客 IPFS 站点，解析 Hugo Stack 主题的 HTML 结构：
+urllib 请求博客 IPFS 站点，BeautifulSoup 解析 Hugo Stack 主题的 HTML：
 
 - **标题**：从 `<title>` 标签提取，fallback 到 `og:title` meta
 - **封面图**：从 `<meta property="og:image" content="...">` 提取 OG 封面
-- **日期**：从 `<time datetime=...>` 提取（无引号属性格式）
-- **正文图片**：精确提取 `<section class=article-content>` 到 `<footer class=article-footer>` 之间的图片，排除头图和底部关联推荐（`related-content--wrapper`）
-- **属性解析**：博客使用无引号 HTML 属性（`src=https://... alt=文本`），正则使用 `\S+` 和 `[^\s>]+` 匹配
+- **日期**：从 `<time datetime=...>` 提取，fallback 到 `article:published_time` meta
+- **正文图片**：取 `<section class="article-content">` 内的 `<img>`（找不到时回退 `<article>` 内第一个 `<section>`），仅保留 `src` 以 `https://cdn.victor42.work/posts/` 开头的图片
 - **过滤**：alt 关键词过滤（表情包/搞笑/恶搞/简笔/搞怪/截图/卡片截图/开支明细/开支构成/消费明细）
 - **输出**：按日期倒序排列，cover 为字符串 URL，images 为 `[{src, alt}]` 数组
 
 ### 5.2 视觉体系
 
-对齐博客 Stack Theme 的设计系统。主色调 `#2A9D8F`，字体 Lato，亮暗双主题通过 CSS 变量 + `[data-scheme="dark"]` 选择器切换。所有样式定义集中在 `src/build.py` 的 `generate_css()` 中。
+对齐博客 Stack Theme 的设计系统。主色调 `#2A9D8F`，字体 Lato，亮暗双主题通过 CSS 变量 + `[data-scheme="dark"]` 选择器切换。样式与脚本源码是独立文件 `src/style.css` 与 `src/main.js`，`build.py` 原样复制到产物目录。
 
 ### 5.3 瀑布流布局
 
@@ -123,4 +122,4 @@ PC 端使用 JS 实现真正的 Pinterest 式瀑布流（4 列，按最短列分
 
 - **Name**: Agent Vik
 - **Email**: agent-vik@victor42.work
-- 沙盒环境需在每次会话开始时执行 `git config` 配置（注意 `HOME=/tmp` 前缀）
+- 沙盒环境需在每次会话开始时执行 `git config` 配置
