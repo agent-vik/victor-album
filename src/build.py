@@ -115,8 +115,6 @@ def generate_index_html(articles, config):
   <title>{site_name}</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="description" content="{config.get('description', '')}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 {ga_head}
 </head>
@@ -177,8 +175,6 @@ def generate_album_html(article, config):
   <title>{title} - {site_name}</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="description" content="{title}，共{total}张图片">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/style.css">
 {ga_head}
 </head>
