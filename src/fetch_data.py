@@ -13,6 +13,7 @@ SRC_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(SRC_DIR, "data")
 
 ARTICLES = [
+    "trip-to-weihai",
     "trip-to-xi-an",
     "trip-to-xishuangbanna",
     "trip-to-zhuhai-and-macao",
