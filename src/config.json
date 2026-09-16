@@ -1,7 +1,9 @@
 {
   "site_name": "Victor42's Album",
   "description": "旅途中的光影记录",
+  "meta_description": "Victor42 的旅行摄影相册：记录亲子旅行、自驾游、城市探索中的光影瞬间，收录国内多地的旅途影像集。",
   "blog_base": "https://victor42.eth.limo",
+  "site_url": "https://album.victor42.work/",
   "preview_count": 24,
   "ga_id": "G-14SGRFWENB",
   "cf_beacon_token": "a5a3e66d648b4ae8bc4356f1a342256e"

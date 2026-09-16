@@ -56,11 +56,12 @@ victor-album/
 │   │   └── index.html             # 各游记详情页（由 build.py 生成）
 │   └── ...
 ├── src/
-│   ├── config.json                # 站点配置（站点名称、描述、博客地址、预览数量、GA ID、CF beacon token）
+│   ├── config.json                # 站点配置（站点名称、描述、meta 描述、站点 URL、博客地址、预览数量、GA ID、CF beacon token）
 │   ├── fetch_data.py              # 从博客抓取图片数据
-│   ├── build.py                   # 核心构建脚本（CSS + HTML + JS 模板）
+│   ├── build.py                   # 核心构建脚本（CSS + HTML + JS 模板 + SEO head + sitemap）
 │   └── data/
 │       └── articles.json          # 抓取到的图片数据（封面 + 正文图片 + alt 文本）
+├── sitemap.xml                    # 站点地图（由 build.py 生成）
 ├── .gitignore
 ├── notes.md                       # 本文档
 └── README.md                      # 仓库说明
@@ -68,11 +69,11 @@ victor-album/
 
 **数据源**: `src/fetch_data.py` 中维护 slug 列表（唯一文章来源），标题、日期、封面均从博客 HTML 自动抓取
 
-**配置**: `src/config.json`（站点名称、描述、博客地址、预览数量、Google Analytics ID、Cloudflare beacon token）
+**配置**: `src/config.json`（站点名称、描述、meta 描述、站点 URL、博客地址、预览数量、Google Analytics ID、Cloudflare beacon token）
 
 **构建**: `src/fetch_data.py` 解析博客 HTML 提取图片；`src/build.py` 包含 CSS/HTML/JS 模板，生成全部页面
 
-**产物**: `index.html`（首页）、`album/{slug}/index.html`（详情页）、`css/style.css`、`js/main.js`
+**产物**: `index.html`（首页）、`album/{slug}/index.html`（详情页）、`css/style.css`、`js/main.js`、`sitemap.xml`
 
 **路径处理**: 脚本通过 `__file__` 动态推导项目路径，不依赖硬编码绝对路径，任意环境 clone 后可直接运行
 
@@ -102,6 +103,17 @@ PC 端使用 JS 实现真正的 Pinterest 式瀑布流（4 列，按最短列分
 ### 5.4 Lightbox
 
 动态创建全屏遮罩 DOM，点击图片放大查看。支持键盘方向键、移动端 touch swipe 前后切换。由于瀑布流布局会重建 DOM，通过 MutationObserver 等待布局完成后再绑定点击事件。
+
+### 5.5 SEO
+
+SEO 头部与站点地图均由 `build.py` 生成，不手写产物：
+
+- **SEO head**：`seo_head_index()` / `seo_head_album()` 生成 title、canonical、robots、description、Open Graph、JSON-LD（首页为 `CollectionPage`，详情页为 `ImageGallery`，含 og:image 指向封面）
+- **描述文案**：站点级 meta 描述写在 `config.json` 的 `meta_description`（已泛化，不含具体目的地列表）；详情页描述由标题 + 图片数自动生成
+- **sitemap.xml**：`generate_sitemap()` 由文章列表自动生成，新增文章自动进 sitemap，无需手维护
+- **robots.txt**：静态文件，指向 sitemap
+
+标题与 meta 描述不含模型数、相册数等易变数字，避免内容变动时改动头部、影响 SEO 稳定。
 
 ---
 

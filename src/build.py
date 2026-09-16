@@ -65,6 +65,100 @@ def cf_beacon_snippet(token):
     return f"""<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{{"version":"2024.11.0","token":"{token}","r":1}}' crossorigin="anonymous"></script>"""
 
 
+def seo_head_index(config):
+    site_name = config.get("site_name", "Victor42's Album")
+    site_url = config.get("site_url", "").rstrip("/") + "/"
+    desc = config.get("meta_description") or config.get("description", "")
+    title = f"{site_name} — 旅行摄影集 · 亲子旅行相册"
+    jsonld = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": f"{site_name} — 旅行摄影集",
+        "description": desc,
+        "url": site_url,
+        "author": {
+            "@type": "Person",
+            "name": "Victor42",
+            "url": config.get("blog_base", ""),
+        },
+    }
+    return f"""  <title>{title}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="{site_url}">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="{escape_html(desc)}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{site_name} — 旅行摄影集">
+  <meta property="og:description" content="{escape_html(desc)}">
+  <meta property="og:url" content="{site_url}">
+  <meta property="og:site_name" content="{site_name}">
+  <script type="application/ld+json">
+  {json.dumps(jsonld, ensure_ascii=False, indent=2)}
+  </script>"""
+
+
+def seo_head_album(article, config):
+    site_name = config.get("site_name", "Victor42's Album")
+    site_url = config.get("site_url", "").rstrip("/")
+    slug = article["slug"]
+    url = f"{site_url}/album/{slug}/"
+    title = escape_html(article["title"])
+    total = len(article.get("images", []))
+    desc = f"{article['title']}，共{total}张图片。Victor42 的旅行摄影相册。"
+    cover = article.get("cover", "") or (
+        article["images"][0]["src"] if article.get("images") else "")
+    jsonld = {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": article["title"],
+        "url": url,
+        "author": {
+            "@type": "Person",
+            "name": "Victor42",
+            "url": config.get("blog_base", ""),
+        },
+    }
+    og_image = f'\n  <meta property="og:image" content="{cover}">' if cover else ""
+    return f"""  <title>{title} - {site_name}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="{url}">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="{escape_html(desc)}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{escape_html(desc)}">
+  <meta property="og:url" content="{url}">
+  <meta property="og:site_name" content="{site_name}">{og_image}
+  <script type="application/ld+json">
+  {json.dumps(jsonld, ensure_ascii=False, indent=2)}
+  </script>"""
+
+
+def generate_sitemap(articles, config):
+    site_url = config.get("site_url", "").rstrip("/")
+    now = datetime.now().strftime("%Y-%m-%d")
+    urls = [f"""  <url>
+    <loc>{site_url}/</loc>
+    <lastmod>{now}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>"""]
+    for article in articles:
+        lastmod = (article.get("date") or "")[:10] or now
+        urls.append(f"""  <url>
+    <loc>{site_url}/album/{article['slug']}/</loc>
+    <lastmod>{lastmod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>""")
+    body = "\n".join(urls)
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{body}
+</urlset>
+"""
+
+
 def generate_index_html(articles, config):
     site_name = config.get("site_name", "Victor42's Album")
     ga_id = config.get("ga_id", "")
@@ -112,9 +206,7 @@ def generate_index_html(articles, config):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{site_name}</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <meta name="description" content="{config.get('description', '')}">
+{seo_head_index(config)}
   <link rel="stylesheet" href="css/style.css">
 {ga_head}
 </head>
@@ -172,9 +264,7 @@ def generate_album_html(article, config):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{title} - {site_name}</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <meta name="description" content="{title}，共{total}张图片">
+{seo_head_album(article, config)}
   <link rel="stylesheet" href="../../css/style.css">
 {ga_head}
 </head>
@@ -256,7 +346,13 @@ def main():
             f.write(album_html)
 
     total_images = sum(a["image_count"] for a in articles)
+
+    sitemap = generate_sitemap(articles, config)
+    with open(os.path.join(DIST_DIR, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write(sitemap)
+
     print(f"\n✓ Built {len(articles)} album pages, {total_images} images total")
+    print(f"✓ Wrote sitemap.xml ({len(articles) + 1} urls)")
     print(f"  Output: {DIST_DIR}")
 
 
