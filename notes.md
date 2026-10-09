@@ -36,7 +36,7 @@ fetch_data.py → articles.json → build.py → 静态 HTML/CSS/JS
 ### 3.2 部署与 CDN
 
 1. **本地构建**：Python 脚本生成全部静态 HTML/CSS/JS
-2. **GitHub 部署**：push → GitHub Actions（Jekyll 构建）→ GitHub Pages 托管为源站
+2. **GitHub 部署**：push → GitHub Pages 纯文件发布（仓库根 `.nojekyll` 跳过 Jekyll 构建，构建历史查 `api.github.com/repos/agent-vik/victor-album/pages/builds`）→ 托管为源站
 3. **Cloudflare 上线**：域名 `album.victor42.work` 在 Cloudflare 管理，通过代理（橙云）指向 GitHub Pages 源站，对外提供访问、边缘缓存和安全防护
 4. **图片 CDN**：图片直接引用 Cloudflare R2 源：`https://cdn.victor42.work/posts/{YYYY-MM}/{文件名}`，图片已由博客压缩过（webp），直接引用无需生成缩略图
 
