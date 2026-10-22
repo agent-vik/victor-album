@@ -1,5 +1,387 @@
 [
   {
+    "slug": "yunhe-terraces-she-township-self-driving-tour",
+    "title": "云和梯田畲乡自驾4天4夜",
+    "url": "https://victor42.eth.limo/post/yunhe-terraces-she-township-self-driving-tour/",
+    "date": "2026-10-22T10:10:00Z",
+    "cover": "https://cdn.victor42.work/posts/2026-10/885c4b3b930ccf1aadae0b2af51c6254.webp",
+    "images": [
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/f2a635e9a25ea3d70f16cd553935f44e.webp",
+        "alt": "千年古樟粗壮的树干，树后是挂红绸的木构长廊与石砌围墙"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/576ac781156fe4ec428d0065d4dd75e4.webp",
+        "alt": "穿蓝色畲族上衣、白色纱裙、头戴银饰凤冠的女孩背身走在满地落叶的土坡上"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/22c9290acef3b55b26c3688fc70a709f.webp",
+        "alt": "木门上凸起的四个铜色畲族装饰符号，笔画由圆角几何形拼成"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/e7689921a1be0b9879291fc1befd60a2.webp",
+        "alt": "白墙外挂满一长排畲族织带，紫、红、灰底上印着菱形与几何纹样"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/80157aadaa5274c71ceb492d589c25a7.webp",
+        "alt": "石雕门楼的老宅正门，砖雕门额下挂着红灯笼，门边摆着畲家土特产摊"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/7a0a271e37d31c14d8b16f23d71391da.webp",
+        "alt": "白墙上的黑底圆形牌匾，中间一个畲字，墙头是带滴水瓦的翘角屋檐"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/6fc69efe9b3adcf7fddeb44e8c54844c.webp",
+        "alt": "挂满红灯笼和紫色黄穗挂饰的石板小巷，尽头露出青色山峦"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/bac22a110cb42968849a78ae083bb286.webp",
+        "alt": "两层木构民居的檐廊，木柱上贴着红色对联，檐下垂着紫色挂饰"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/15f015a93f2b032908b6f0a6f90fda9b.webp",
+        "alt": "白墙青瓦的两层建筑与旁边深色木板老屋，右墙刻满汉字姓氏，背后是连绵青山"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/56f7381b9472a45b9ad37e31934b0e65.webp",
+        "alt": "白墙黑瓦的祠堂式建筑，屋脊两端翘起，墙面题着三个墨色大字，门前是卵石台阶"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/7a10b8f76c4b997b627feed4acb57263.webp",
+        "alt": "白墙上铺满树影，右下角是翘角檐头的投影"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/593d4873313ac3439b1d9e51fcfd1ca6.webp",
+        "alt": "戏台上四位穿紫色长裙的舞者同时抬手起舞，背景圆牌上写着中国畲乡之窗"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/5abbbf049691543663668ed679155155.webp",
+        "alt": "大均古街牌坊下站成两列的畲族演员和游客，檐下挂满红灯笼"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/342999802785c123f6388dc1e540a13b.webp",
+        "alt": "穿紫裙、戴银饰头冠的畲族女子围住戴草帽、穿蓝色马甲的男子，旁边停着轿车"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/7fa0204028af09f80cfd9fc1f2186e19.webp",
+        "alt": "昏暗的室内剧场，四块圆形背光屏上投出舞者的剪影，前方是红地毯"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/cf7e8ebfa775c01bb540c697c24ef450.webp",
+        "alt": "室内红色布幔下，几名穿红衣的演员聚在贴有囍字的厅堂里"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/823353caedbed1d10e32f5f38decdfbb.webp",
+        "alt": "林间石阶通向溪边，尽头泊着挂红灯笼的竹筏"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/7fd381e7626e75a1fb7ffebb6e32cd2d.webp",
+        "alt": "碧绿的溪水被两岸青山夹住，岸边一丛树叶已经转黄"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/f1e85bfed4ec744309f3bec6a1de7a67.webp",
+        "alt": "溪对岸林木覆盖的山坡，坡上立着一座通信铁塔，山脚有石砌小棚"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/c56904798f866eaed25e2b9379b39864.webp",
+        "alt": "阳光在溪面上碎成一片亮点，远处两条红色充气艇载人漂流"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/0bfd27f8ff8d86d3a06ee3cbbc01df3a.webp",
+        "alt": "白墙老宅的深色木门前贴着红春联与褪色的蓝字旧联，门额题着山哈家园"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/b8d1fc73ab43c5b0da8bd22d338f1d45.webp",
+        "alt": "巷道墙面的彩绘壁画，画着一排穿深色畲族服饰、坐着奏乐的男女"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/eb58a705adeca22ebdf405cff65b1a8f.webp",
+        "alt": "夜色中被灯光照亮的仿古楼阁，层层飞檐沿石砌台基向上收拢"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/b22b18b0f381228ff60ebf3d47983b06.webp",
+        "alt": "夜色中的畲乡风情街，穿民族服饰的演员被举手机的游客围住"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/db1958f4c3625176df0c1bca5439f4ba.webp",
+        "alt": "街道上空挂满成片的手绘方形纸灯笼，下方是撑着红伞的人流"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/5f8dcb243ff21c2b33b9652596dd3b9e.webp",
+        "alt": "穿红色短裙的舞者在人群中起舞，头顶是成片灯笼"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/61321a7ae3692085448481fc689314df.webp",
+        "alt": "两名男子分别站在一只浅圆盆上，四周围满畲族演员和游客"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/b974ce7495ba51ee42a4900b1cff5545.webp",
+        "alt": "背着竹筐的表演者与穿白色长裙的女子在灯笼下互动，游客围观"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/dae4e12fe29bb67a97788a4cea56de8d.webp",
+        "alt": "几名穿红裙的舞者在灯笼街心起舞，两侧站满围观的游客"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/e49412076678723225da4adfc4cccac1.webp",
+        "alt": "铺红布的桌前，穿红色婚服的女子向跪着的男子敬茶，旁有人举手机拍摄"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/94dbbeded1f928bfd7f8a3a268aba82c.webp",
+        "alt": "广场中央燃着一盆篝火，穿民族服饰的演员与游客围成圆圈"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/09a0e34ff0ade3a8856ab2b2d0d0f6e1.webp",
+        "alt": "夜间舞台前，演员与游客围成圈跳舞，一旁有女孩驻足观看"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/c7c40077d9eae371412b0f293f651420.webp",
+        "alt": "层层叠叠的金黄梯田铺满山谷，远处是连绵山脊"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/80a84a0991abdef0237e98dd51fc7b40.webp",
+        "alt": "稻田的稻穗占住画面下半部，远处山脊与云层相接"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/cbf9da64cf97115a8ee634a966a2ebf2.webp",
+        "alt": "山脊下的梯田顺着坡面层层下落，天色已近黄昏"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/61ce8dc85ca6b31e79202df6955be5b0.webp",
+        "alt": "戴帽的小女孩沿着梯田间的窄田埂往稻丛深处走"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/4b3b5707ac891cc3415636400c2c9c4a.webp",
+        "alt": "梯田顶端的现代观景建筑，白色曲面屋顶贴着山脊"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/885c4b3b930ccf1aadae0b2af51c6254.webp",
+        "alt": "俯看整片梯田，稻浪之间散落着远处的村庄和群山"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/9f8aa18deefbe207ca18876a38fe4fa0.webp",
+        "alt": "近处水塘里立着残荷，远处山坡上是层层梯田和走动的人"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/72ebce8637234b2be17510613a0b6958.webp",
+        "alt": "小女孩站在红色圆盘上，旁边立着摇锅的说明牌和卡通立牌"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/197ebbcd5409932c37f6da18f9a0df9a.webp",
+        "alt": "山坡上投着一大片云影，上半部是蓝天"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/6d1cbf0aa4b704157f33ce3363f0bdbb.webp",
+        "alt": "公路上，一辆三轮摩托载着大捆竹枝驶过，路边是梯田"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/a629fbfc97c94382566b4a00f5f97636.webp",
+        "alt": "山脊上空的蓝天与一道飞机尾迹云"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/7371ef154bd589728311a7b57790ee9e.webp",
+        "alt": "红砖塔楼造型的酒店，门口立着一个巨大的黑色卡通兔雕塑"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/1ee0061a27f68d1cdb73e0163c2c3854.webp",
+        "alt": "从高处俯瞰山谷，梯田、村庄和远山层层叠开"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/85c3e3399dfe56b03b3e3dc853f57adc.webp",
+        "alt": "厚重的云层压在山脊上，山腰立着一台风机"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/24661b744db074566bf00598a86688cf.webp",
+        "alt": "晒秋的木架上挂着玉米串，竹匾里摊着切片的红辣椒"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/18e69f818b178e27b8affa26d7c835de.webp",
+        "alt": "梯田环抱中的几幢白墙黑瓦民房，田间小路交错"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/fa4a05823110964b967471340266f5e9.webp",
+        "alt": "屋顶露台上铺着蓝色地垫，摆着两个大花盆，背后是青山"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/a8f8c86426708b3448ce25e0972bcfa5.webp",
+        "alt": "山谷里的村庄与盘绕的田埂小路，远处县城笼在薄雾中"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/d5ac536e5b5222a10e8cfdf90750544f.webp",
+        "alt": "草地上摆着宠物游乐设施和卡通狗立牌，一个小女孩在里面跑动"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/fd35d37f699e23c00201160735c863a0.webp",
+        "alt": "石块砌成的挡墙与向上的石阶，墙头是一根木杆，背后是蓝天"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/8c0df49c5b70b96842cd2ffd2c4fd02c.webp",
+        "alt": "夜色中的老街店铺，木格窗透出暖光，檐下挂着红灯笼"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/489ec32645bdf5c4e59c5707592b64ec.webp",
+        "alt": "夜色中被蓝光照亮的石板路，一直延伸到黑暗里"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/b9f550729955f49ec363820fc7d9278d.webp",
+        "alt": "透过石窗框看到一位写生者坐在画架前"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/f67ee5b835f57ec4782b8c9f3856b601.webp",
+        "alt": "灰色混凝土外墙的古堰画乡艺术中心，墙面上有馆名标识"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/0f23acb8bb31abe00a6895fcbfcd6602.webp",
+        "alt": "白墙红门的民房阳台，栏杆上晾着一排玉米"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/f7aa70109c0acd97808fbe418957ef15.webp",
+        "alt": "江边步道旁的大树遮出浓荫，几个人坐在岸边石阶上"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/f53a9cd2d9de7ac0ef1b061b71151366.webp",
+        "alt": "宽阔的江面上漂着几只小船，对岸是连片树林"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/48e4dbca829246092a4d8e90c4070584.webp",
+        "alt": "江边街道上方拉着彩色布条，两侧摆着展板和画廊招牌"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/a78cdf192633382bd6884b89f078bfb3.webp",
+        "alt": "江面上行驶着画舫式游船，船身是仿古木构"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/c76d77a97b6f2cf87049ba1ed015a459.webp",
+        "alt": "河边石砌的斜坡与绿色水潭，对岸是密林"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/47e13fde76ba12a1dd7283900cda88f7.webp",
+        "alt": "木构水闸架在石砌桥墩上，下方是流动的渠水"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/870ca9edfc42eb9f44441c8f0def4e50.webp",
+        "alt": "通济堰水系古图与说明文字，图中画出干渠、支渠与灌区"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/aded959f175bf831e8b7dd0e482b6d46.webp",
+        "alt": "白墙黑瓦的文昌阁门楼，门额题着文昌阁，两侧挂楹联"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/f3c78b38d5f9df90c1a1839ef0e8a83e.webp",
+        "alt": "石涵上方的小桥与栏杆，桥下是分流的水道，两侧绿树成荫"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/69767433ef78a7106a15968074eb71da.webp",
+        "alt": "古樟下的小溪与石阶，溪水上有细流落下的白色水花"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/5493b63af13ed31e58ddf33301ac68f1.webp",
+        "alt": "横跨江面的石堰，堰顶排着一列方形石墩，远处是山"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/542795da09a2bfe6130132d613be933b.webp",
+        "alt": "一棵巨大的古樟，树前是石阶和红色围栏"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/772db74ea4d964a80fd7f48829e9079f.webp",
+        "alt": "屋檐下垂着一只竹编灯笼，前景是树叶，远处是江面与青山"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/eade95c964f2e886fa3f4357651dd30a.webp",
+        "alt": "屋脊和檐角露出在画面下方，上方是蓝天与白云"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/613357c21c2a5fb925da3b74fb565361.webp",
+        "alt": "平静的江面与两岸树线，远处山峦被薄雾笼罩"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/7cec201c6354864d09085b70e901f2a1.webp",
+        "alt": "沿江的白墙民房与停泊的小船，背后是青山"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/dcac519a3a49dca03dafeaeb0355d5f5.webp",
+        "alt": "江面上停着几条挂白帆的小舟，对岸是浓密树林"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/197a7caf68a1a1bedd716f2c668f462c.webp",
+        "alt": "铁锅里的畲族豆腐娘呈青绿色糊状，表面浮着碎菜叶"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/aacc97c1104b74494f62ca6049c98b6e.webp",
+        "alt": "一只手举着一朵巴掌大的干香菇，下方是一筐同样的干货"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/51796b34e64b2541bb78c4eb9d21fd03.webp",
+        "alt": "竹筐里装着淡色的木片状药材"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/0e7d867bb3bc1f5abc66b41273bb98fb.webp",
+        "alt": "竹筐里堆满细枝状的干药材，底部垫着报纸"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/a401361f8d5d69d49b04565fc4d45638.webp",
+        "alt": "竹筐里装着淡黄色卷曲的土豆干片"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/2d0269435f603f2a8a54d379df16c1c9.webp",
+        "alt": "一盘连成一片的煎饺，底部煎出焦黄脆壳"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/5a639ce21a409ac478315c57e5d519a0.webp",
+        "alt": "白瓷盘里是炒牛肉粒，配着青蒜和芥菜干"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/775b0779081f8cda8c4818d2cb1f4230.webp",
+        "alt": "一盘深褐色的干豆角炒菜，泛着油光"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/ecf0bc95d54ad3f648261b3edbf35ed8.webp",
+        "alt": "白盘里整齐码着红烧马口鱼，浇着酱汁"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/715c3754bb6d45348f40d760d09218a6.webp",
+        "alt": "盆里游着十几条细长的小鱼，水面上是密集的气泡"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/349cf57da6b8e72742034072209f1d34.webp",
+        "alt": "冷柜里摆着切片的青绿色豆腐和旁边的毛豆，插着畲家青豆豆腐的价格牌"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/14b96efa0bf0f8985b933edf52551192.webp",
+        "alt": "盘里的煎蛋摊成大片，蛋液里混着细碎的绿叶"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/cb6b8b3bdef055c79d44843a29960819.webp",
+        "alt": "陶盘里是带皮牛肉块，汤汁浓稠，上面撒着香菜"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/b2d1d340bdc93d97eed3bf4fda505776.webp",
+        "alt": "长方铁盘里码满红烧小溪鱼，汤汁里漂着葱花和辣椒"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/09480d16b409dd95f180a35d098fedc5.webp",
+        "alt": "白盘里是深色菌菇与青红椒同炒，其中几只菌柄细长、伞盖张开"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/9a37fca26b1731a543fe026013641fc5.webp",
+        "alt": "木托盘上的早餐，有米粉、煎蛋、西瓜、小菜和一碗豆浆"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/b4460c8590a9cd8b52fdf348bddb8e66.webp",
+        "alt": "木门上贴着一张泛黄的黄纸符，符面画着八卦与朱笔文字"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/81553ba12fcb066342d8061d0939f500.webp",
+        "alt": "砖墙木门两侧贴着红色基督教对联，门上是红底横批"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-10/68aff2568f7965bcacfa7c873b54239c.webp",
+        "alt": "按住宿、市内交通、游玩、跨市交通、餐饮分类的构成条形图"
+      }
+    ],
+    "image_count": 93
+  },
+  {
     "slug": "trip-to-weihai",
     "title": "威海初秋看海玩沙6天5夜",
     "url": "https://victor42.eth.limo/post/trip-to-weihai/",
