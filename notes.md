@@ -89,7 +89,7 @@ urllib 请求博客 IPFS 站点，BeautifulSoup 解析 Hugo Stack 主题的 HTML
 - **封面图**：从 `<meta property="og:image" content="...">` 提取 OG 封面
 - **日期**：从 `<time datetime=...>` 提取，fallback 到 `article:published_time` meta
 - **正文图片**：取 `<section class="article-content">` 内的 `<img>`（找不到时回退 `<article>` 内第一个 `<section>`），仅保留 `src` 以 `https://cdn.victor42.work/posts/` 开头的图片
-- **过滤**：alt 关键词过滤（表情包/搞笑/恶搞/简笔/搞怪/截图/卡片截图/开支明细/开支构成/消费明细）
+- **过滤**：alt 关键词过滤（表情包/搞笑/恶搞/简笔/搞怪/截图/卡片截图/开支明细/开支构成/消费明细/开支分类构成/账单明细）。机制依赖博客端 img alt 与关键词的连续子串匹配，alt 措辞变体会绕过——2026-10-23 全量审计曾漏网 3 张开支图（"开支分类构成"绕过"开支构成"、"账单明细"绕过"消费明细"）后补词修复；单字级关键词方案（开支/花费/账单/明细/消费/构成/表格/截图）经实测会误杀正常照片（如西安陶俑 alt"多民族构成"），已否决。新增游记发布后建议抽检文末图（开支统计图惯常位置）
 - **输出**：按日期倒序排列，cover 为字符串 URL，images 为 `[{src, alt}]` 数组
 
 ### 5.2 视觉体系
