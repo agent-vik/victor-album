@@ -98,7 +98,14 @@ urllib 请求博客 IPFS 站点，BeautifulSoup 解析 Hugo Stack 主题的 HTML
 
 ### 5.3 瀑布流布局
 
-PC 端使用 JS 实现真正的 Pinterest 式瀑布流（4 列，按最短列分配），移动端退化为单列自然流。图片加载期间网格 `height: 0; visibility: hidden`，加载完成后展开并显示布局。核心难点在于浏览器 DOM 操作是批量的，必须先用 `display: block` 让元素获得自然高度，再用 `offsetHeight` 预量后分配。
+PC 端使用 JS 实现真正的 Pinterest 式瀑布流（4 列，按最短列分配），移动端退化为单列自然流。图片加载期间网格 `height: 0; visibility: hidden`，加载完成后展开并显示布局。
+
+**测量约束（2026-10-28 塌列 bug 的教训，改这块前必读）**：`layoutMasonry` 量元素高度有两个陷阱——
+
+1. 元素脱离 DOM 后 `offsetHeight` 恒为 0。旧版重排时先删旧列再量高度，所有元素全部量出 0、全堆进第 0 列；触发源是布局完成后页面变高→滚动条出现→视口宽度微变→`resize` 事件→重排，故现象为"正常一闪而过→塌掉"。
+2. 未就绪的网格是 `height: 0` 的 flex 容器，列内元素会被 flex 压缩成 0 高，直接在列内量也全为 0。
+
+正解：在网格内挂一个 `position:absolute; visibility:hidden` 的定宽测量容器（宽度=真实列宽），元素在其中保持 DOM 连接且不受 flex 压缩，量完再分配进列。
 
 ### 5.4 Lightbox
 

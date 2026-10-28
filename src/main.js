@@ -47,31 +47,42 @@ document.querySelectorAll('.img-wrap img').forEach(function(img) {
   function layoutMasonry(grid) {
     var items = Array.from(grid.querySelectorAll(".photo-item"));
     if (!items.length) return;
-    var oldCols = grid.querySelectorAll(".photo-col");
-    oldCols.forEach(function(c) { c.remove(); });
+    grid.querySelectorAll(".photo-col").forEach(function(c) { c.remove(); });
     var numCols = getNumCols();
+    var gapSize = 12;
+    var colW = (grid.clientWidth - gapSize * (numCols - 1)) / numCols;
+
+    // Measure heights off-flow at exact column width. Items must stay in the
+    // DOM while measured (detached elements report offsetHeight 0, which
+    // would collapse everything into col 0), and must NOT sit inside the
+    // pre-ready grid (height 0 + flex would shrink them to 0 as well).
+    var measurer = document.createElement("div");
+    measurer.style.cssText = "position:absolute;visibility:hidden;top:0;left:0;width:" + colW + "px;";
+    grid.appendChild(measurer);
+    var heights = items.map(function(item) {
+      measurer.appendChild(item);
+      return item.offsetHeight;
+    });
+    measurer.remove();
+
     var cols = [];
+    var colHeights = [];
     for (var c = 0; c < numCols; c++) {
       var col = document.createElement("div");
       col.className = "photo-col";
       cols.push(col);
+      colHeights.push(0);
       grid.appendChild(col);
     }
-    grid.style.display = "block";
-    var colHeights = [];
-    for (var c = 0; c < numCols; c++) { colHeights.push(0); }
-    var gapSize = 12;
-    items.forEach(function(item) {
-      var h = item.offsetHeight;
+    items.forEach(function(item, i) {
       var shortest = 0;
       var minH = colHeights[0];
       for (var c = 1; c < numCols; c++) {
         if (colHeights[c] < minH) { minH = colHeights[c]; shortest = c; }
       }
       cols[shortest].appendChild(item);
-      colHeights[shortest] += h + (colHeights[shortest] > 0 ? gapSize : 0);
+      colHeights[shortest] += heights[i] + (colHeights[shortest] > 0 ? gapSize : 0);
     });
-    grid.style.display = "";
   }
 
   var grids = document.querySelectorAll(".photo-grid");
