@@ -1,5 +1,859 @@
 [
   {
+    "slug": "trip-to-nanjing",
+    "title": "南京民国&动物园周末游3天3夜",
+    "url": "https://victor42.eth.limo/post/trip-to-nanjing/",
+    "date": "2026-11-16T23:43:00Z",
+    "cover": "https://cdn.victor42.work/posts/2026-11/528d4fb84db743448d158cc0d98c8c9e.webp",
+    "images": [
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/f99e2f5210e3823d14cdda65913bf353.webp",
+        "alt": "红山导览图以插画标出大红山、小红山、放牛山与南门新区四大板块。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/bad68041e3d691227dcd1a4c308d1733.webp",
+        "alt": "木制指路牌的四块箭头分别写着非洲之歌、非洲村落、迷你沙丘与智慧之灵。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/b42a69c4b1d0ac35496736c9a735d594.webp",
+        "alt": "长颈鹿站在树旁，三只斑马在干草地上低头觅食，前景是数米高的高草。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/e97aa7304a9b5cde7131e4c0d5eba278.webp",
+        "alt": "木框展板《共生的秩序》以黑体字讲解长颈鹿、斑马、角马与鸵鸟如何分层取食。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/787902ed98dd738c622eb45b2c47f116.webp",
+        "alt": "小学生们背着书包排成长队走在园区小路上，几名大人随行，远处有人举着蓝色班牌。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/73626e997cd6429cab21d6cd5bf79989.webp",
+        "alt": "一只淡黄褐色的耳廓狐蜷卧在沙地上，耳朵宽大，闭着眼，身旁有两块扁平石板。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/bd1ce18fad577b2aa5e3c5b3487ac853.webp",
+        "alt": "木栅栏门上贴两幅耳廓狐门神画，分别写着勿拍玻璃与不要投喂，中间挂着红色禁入牌。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/852e2f126c5d77e21e0e0adc94540799.webp",
+        "alt": "空旷沙地上有两只细尾獴立起身子张望，四周散放原木、树桩和挖掘出的洞口。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a3c0814c632c0b921cabb53dd3e1c2fc.webp",
+        "alt": "沙坡上散布多个洞口与横卧的空心原木，一段树桩被掏空成出口，前景是玻璃隔断。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/f2e8643904050a3e5ce9cb6573acb978.webp",
+        "alt": "灰头绿身的塞内加尔鹦鹉停在锯平的树枝上，腹部带橙黄，背后是粗糙的岩壁。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/1d19471e605715cedef62caa80e1c3f0.webp",
+        "alt": "三只绿身红脸的费氏牡丹鹦鹉落在铺满干草的沙地上，左侧横着一段朽木。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/6bc3bcf5b5abfd478e3a7769389249cc.webp",
+        "alt": "土墙上伸出枯枝，几只费氏牡丹鹦鹉停在枝头，右下角一只落在地面的干竹叶堆里。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/5e1d5182883a8b05a0724ab81ed83853.webp",
+        "alt": "一只东黑白疣猴卧在树杈间，白色流苏状长毛披在黑色身体上，长白尾垂到树下。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/26df2ea674b86dfea40fe4b7ebd344a9.webp",
+        "alt": "东黑白疣猴攀在树干上啃食枝叶，脸上有白色眉环，右侧露出同伴的白色长毛。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/2e490b92de10580495df57f7750e3170.webp",
+        "alt": "竹编展板用卡片和照片按年代讲述非洲灰鹦鹉的贸易与保护，右侧挂着同名木牌。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/45fa422b46655ece6f56e80f4990397d.webp",
+        "alt": "非洲灰鹦鹉停在木架上，羽毛灰色带浅色鳞纹，眼周裸露成白圈，尾羽露出一抹红。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/71e34bd7e75f7be4c2a7a108fef38b54.webp",
+        "alt": "鸟舍玻璃上画着几片黄绿色蕨叶，木框与竹条围栏之间横着一根枯枝。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/fe2d8cad34f0598f3f231fd880d3ec4c.webp",
+        "alt": "竹丛前的木牌上手绘山魈脸谱，红字写山魈出没，黄字提醒静静观察、勿投喂逗弄。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/4df0a5ec46a5c3f7e0ca8840c8f135ee.webp",
+        "alt": "深绿色木牌用一张内外场示意图说明大猩猩的行踪，并列出它们可能躲进内场的时间。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/5314199f39d3972042e85e9fa8c399d5.webp",
+        "alt": "人造洞穴石壁上用赭红颜料画着奔跑的鹿与持弓人像，右侧墙还有螺旋纹样。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/dbc0a3201a506711a157125cc7cfc72e.webp",
+        "alt": "赤猴站在原木上正对镜头，背部红褐色，四肢与脸颊灰白，拖着长尾。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/300dde631fd8e5d7d32188a03875be80.webp",
+        "alt": "一只体形较小的赤猴伏在满地落叶间，用前爪翻找食物。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/b620779ec6479123eccf35daf1aa8bf1.webp",
+        "alt": "木门楣刻着中英文馆名，两侧门柱贴着残缺的红对联，游客正鱼贯走入室内展馆。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/85482a2248eac9372508661ad2843e34.webp",
+        "alt": "木墙展板以跨越十年为题，用文字和科洛版画讲述红山迎接大猩猩的保育历程。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/b54692b499a43501ff72f8f1bfa6b6c9.webp",
+        "alt": "一只红毛猩猩趴在岩台角落休息，身前挡着粗木桩与绳索，背后是一扇带格窗的灰门。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/c5127cd3411feaf34d27ae68bc345b78.webp",
+        "alt": "昏暗展厅的木板标题是如何认识一只牛蛙，旁边一只绿色牛蛙模型被射灯照亮。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/1b7a202d4d8fc786ca56e476ff6a6983.webp",
+        "alt": "展台内密植棕榈与大丛剑叶植物，前景标牌写着尼罗河巨蜥，沙地与岩石隐在暗处。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/2df023f227a4df669388dd96c0d8d026.webp",
+        "alt": "隔窗可见不锈钢操作台与料盒货架，台面堆着西兰花，右侧贴着大猩猩啃树枝的手写说明。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/475f3f3a3cd3ea055ade1a448bce870e.webp",
+        "alt": "枯枝与苔藓搭成的展墙上挂着手绘图板，下方木牌分写大猩猩属与黑猩猩属，一对母女正在细读。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/fe8204be5e683fcdd9259285f97e82b7.webp",
+        "alt": "木板上印着黑猩猩涉水与同伴在岸边的插画，配字说明它们靠泡水保持凉爽。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/2df236d7e8be33bb82e10f46bfafea83.webp",
+        "alt": "木牌上的画里，一只猩猩把一束树叶举在头顶，旁边写着它们会用树叶挡雨。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/f9406abda8b11dfa71e5d353ca62c99f.webp",
+        "alt": "画中一只猩猩悬在枝头，用自制的长矛伸向河面叉鱼。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/d35eab8c9232c321a0f136082fb43006.webp",
+        "alt": "木板人属板块用文字讲直立行走的由来，下方画着从弓身行走到直立持棒的演化序列。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/3fa1767895dcf3be80840689d97bb6b4.webp",
+        "alt": "彩绘丛林背景的展板以金刚海报与铁笼标本串起人类重新认识大猩猩的经过。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/408e3a3f60aed61a46ef9dfb2d113641.webp",
+        "alt": "木桌上摆着大猩猩头骨模型，齿列与眉骨清晰，旁边是一块请勿触摸牌与几段手写说明。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/ecf0c180ee2550032d1f0b64b60798cd.webp",
+        "alt": "壁画上三位女科学家分处雨林场景，各配木牌介绍她们对猩猩行为的新发现。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/64e1738e42418e80335c7a76948a1a7d.webp",
+        "alt": "木桌上放着一盏煤油灯和盛有两个土豆的竹篮，穿粉衣的小女孩正提起灯环。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/0f502b4112756ba605e236c01078785e.webp",
+        "alt": "一只黑猩猩躺在浅色干草上，前臂搭在胸前，缠着绿布条的粗绳从它上方斜过。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/401cf4eb288c4bace542b3e636a73b35.webp",
+        "alt": "黑猩猩展区全景，几株枯树与绳索交错成大型爬架，地面铺草，一只黑猩猩卧在草堆上。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/56782e83ae770772e9f4afc1e3876609.webp",
+        "alt": "用枯黄芭蕉叶层层搭起的小屋，留出黑暗的门洞，右侧贴着说明这是仿特瓦人就地取材搭建的。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/966cfddc911c503152d3031bff820260.webp",
+        "alt": "绑在树干上的木牌提醒前方就是洗手间，出去后要走到非洲区才有，约需20到30分钟。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/0e5f372d51a7a667832966b95bebd875.webp",
+        "alt": "黑板分栏列出野生动物旅游的积极与消极影响，右侧用表格给出可持续原则和游客能做的事。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/e33b1320c9ceb027c68a27b48c7c9b3c.webp",
+        "alt": "左侧网纹长颈鹿的斑块边界清晰，右侧南长颈鹿的斑块边缘模糊，两只都在树梢取食。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/83c5714ae13ab847d9982077158189b6.webp",
+        "alt": "科普牌用四个圆形斑纹特写对比马赛、南方、北方与网纹长颈鹿"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/0b58c8e395edc94c352c84c5e5c02488.webp",
+        "alt": "水雾从喷头洒落在长颈鹿展区的水塘与芦苇间，远处一头长颈鹿站在遮阳篷下"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/0e19bc419b0740e9a1748c3f1207da7b.webp",
+        "alt": "木柱上钉着一块黄底菱形的袋鼠标志牌，藤蔓从旁垂落"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/854d249f7b42c11b48245e5a7cd2cb83.webp",
+        "alt": "两只袋鼠卧在树荫下的沙地上，前侧那只粗长的尾巴笔直拖在身后"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/dbccb72b291c4f4db602238d1f6ea601.webp",
+        "alt": "木牌标题为“澳洲之殇”，讲述2019-2020年黑色夏季山火，下缘画满火焰与袋鼠剪影"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/2cab718ed8a7f0750635def233bac2c6.webp",
+        "alt": "横线纸上的手绘地图，把南美、非洲、南极洲、印度与澳洲拼成冈瓦纳古陆"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a9371d3cbbb06bb713a0c51905b858d3.webp",
+        "alt": "分层的地质年代墙上按顺序凸起三叶虫、恐龙与古象浮雕，一个戴花帽的孩子背对镜头观看"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a0289acc48dda73643194f8a821abd4c.webp",
+        "alt": "红背须僧面猴伏在木箱顶上，粗大的尾巴卷成弧形垂在身后"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/327ef13d3042c7eabf3d1bee3f9ec160.webp",
+        "alt": "两只红背须僧面猴并排坐在悬索上，一只捧着绿叶，粗大的尾巴笔直垂下"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/8a35a9572511594ade3d26b1d2351c49.webp",
+        "alt": "隔着玻璃望进疣猴露天展区，绳索与芭蕉叶间一只东黑白疣猴趴在木台上，长白尾拖在后"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/3d81b94fb85b05a63a9106001e84a2ef.webp",
+        "alt": "玻璃内侧两只东黑白疣猴紧挨着，一只低头为另一只理毛，白色长毛披在黑色背上"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/b35f35bfefe3b5aabd22592ce2555a84.webp",
+        "alt": "一只东黑白疣猴趴在木板上，把蓬松的白色长尾高高竖起，另一只在旁坐着"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/c3c79c12cf38d81e59946cf920f36d3f.webp",
+        "alt": "展板标题“植物和昆虫的共同演化”，下方以箭头标出植物进化出孢子体、维管束与叶的次序"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/23df1d5adc87a503bada68c643e3d2d2.webp",
+        "alt": "展板“鳞木巨型化的原理”，圆形剖面图标出维管束，左侧是一段带叶痕的树干"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/7a442c837582d171207d2b11ff9b5069.webp",
+        "alt": "展板讲达尔文对大彗星兰的预言，下方标本盒里钉着一只斯芬克斯蛾，旁边画着星形白花"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/df4148c389bfe7a9c292dc0a11dd2d4b.webp",
+        "alt": "赤掌𤟠蹲在横枝上，一身黑毛，橙黄色的手掌与脚掌格外醒目"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/efa351ed2f652993833302b3bf5ce383.webp",
+        "alt": "金头狮面狨趴在枝干上，金色鬃毛围住黑色面孔，身后是几根绿竹"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/8fef24b76b3de8a8e53f6a3a1b91d311.webp",
+        "alt": "竹丛与横枝之间夹着一块红色食物，悬在半空中供猴子取用"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/3b5982d09ae7119c58de61cd126e3986.webp",
+        "alt": "展板题为“印第安人的自然哲学——万物有灵”，配有渔猎与河谷山地的两幅照片"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/73af6d314f3caca1f86d2c4c0dba4a1d.webp",
+        "alt": "红吼猴信息板做成不规则拼块，装着成猴幼猴照片、食性说明与南美分布图"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/eb227ce3366cb1f04d3798606f49ede6.webp",
+        "alt": "鲜红的美洲红鹮停在绿叶间，上方那只身旁堆着一团枝条巢"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/147b9b50af9e8509a39602352d4b8d58.webp",
+        "alt": "托哥巨嘴鸟停在粗横枝上，橙黄色大嘴尖端带黑斑，喉部雪白"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/6447e39a89b7851ff119f65fa4a7ee75.webp",
+        "alt": "大凤冠雉站在落叶地面上，乌黑羽毛泛着光泽，蜡黄色喙基隆起一团"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/8792554b79ebd8c6782a7136ed4154f8.webp",
+        "alt": "岩石墙前一只美洲鬣蜥趴在斜出的粗枝上，雾气里远处的木箱隐在角落"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/d497d36bba137c7cf3b9f77ee7d7a618.webp",
+        "alt": "树懒用前肢倒挂在枝上，毛茸茸的脸正对镜头，鼻头乌黑"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/f6f9be93b36f6b5eeaf735e92d189b75.webp",
+        "alt": "橙红色的美洲鬣蜥趴在横枝上，细密水雾正从上方洒落"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/fb28ec28151ed45161518a46be134aa6.webp",
+        "alt": "红尾蚺盘在石台后方，深色斑纹的身躯大半被岩石与叶片遮住"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/6aab2d364e9a6574d29c77d86173b1ca.webp",
+        "alt": "松鼠猴蹲在枝上，白色的脸和橙黄色的小腿从大片绿叶后露出来"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/ad0cedbdcb5027ec568de55118917957.webp",
+        "alt": "深绿墙面上以五个圆形展项和虚线路径串起爬行动物从登陆到称霸的历程"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/71813772f7d84351a3e8fe326a197351.webp",
+        "alt": "转角墙上背光的巨幅演化树壁画，细密分支上排满小动物图像，两名观众坐在原木凳上"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/22718c32b9b66b16605f6714571d1e68.webp",
+        "alt": "混养展馆一角的浅水塘与枝蔓，落枝浸在水里，玻璃上映着人影"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/9285163a33b1e04f0a15fcb666bef6b9.webp",
+        "alt": "斑帆蜥趴在高处岩石上，背脊竖起一片帆状鳍，长尾垂过叶丛"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/980dd29f150c233d3a02c26a86b8cabc.webp",
+        "alt": "鹩哥停在交错的粗枝上，乌黑的羽毛衬着橙黄色喙与头侧肉垂"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/cc2f08dd3d0d9d55458055b74ea4b3a2.webp",
+        "alt": "缅甸陆龟正爬向镜头，隆起的褐壳与鳞片密布的头顶占满画面"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/5444b48a1bb7c6ff7f628b80ae5d6a09.webp",
+        "alt": "水下视角里几尾小鱼在沉木与浮叶之间游动，水色泛着青绿"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/ab0292c8657c42baf0b40451a85aff5f.webp",
+        "alt": "中美毛臀刺鼠蹲在红褐色泥地上，另一只从右后方模糊地跑过"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/43eb2ed8af8e2adb28388bf2613448eb.webp",
+        "alt": "棉顶𤟠隔着枝条直视镜头，头顶一圈白毛翘起，脸却是黑的"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/2a9c3668aa51df01f5aa91c6f872fdd9.webp",
+        "alt": "普通狨坐在粗枝上，耳朵两侧的白毛蓬起，身前挂着金属食篮"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/015eb8efe74a9d7273a705abf5bb6090.webp",
+        "alt": "赤掌𤟠侧坐在横枝上，四肢末端橙黄色的脚掌与垂下的长尾形成对比"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/49c50efadfa6b53f8908294f3675132f.webp",
+        "alt": "白面僧面猴缩在高处岩台上，深色身体衬出浅色的脸，只占画面一小角"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/52610c18c6a2409c7ed801feca634545.webp",
+        "alt": "岩石上只留下一团模糊的黑影，白面僧面猴在快门瞬间一溜烟跑开"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/5c9a37fd8d4fb410417f4f0329eef43b.webp",
+        "alt": "五块深蓝色展柱各印着一位科学家肖像与理论名，戴花帽的女孩站在最前面"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/d7650b4a7a086a1136857cd8302d2126.webp",
+        "alt": "米色的冈瓦纳各陆块剪影上密布圆形动物照片，右侧是“地球生物圈”标题"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/b5f49552bd4d887b8a2c3e1979d3123e.webp",
+        "alt": "两只粉橙色火烈鸟站在浅水中，一只把弯喙探进水面觅食。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/776eaf6d96386e9b7aa55885815dc9f0.webp",
+        "alt": "沙地上两只火烈鸟，左边一只羽色偏淡，正把长颈盘进背羽。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/9cb243c531690ef429b7d6d2583780e2.webp",
+        "alt": "隔着玻璃，一只灰毛考拉卡在桉树枝杈间，低头吃叶。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/2a4053c26e3417243615bfc17cdbe93f.webp",
+        "alt": "隔玻璃看考拉馆室内：桉树干立在绿色地面上，枝头绑着叶束，两盏取暖灯亮着。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/bfec912fa6cedc3844c656401f515977.webp",
+        "alt": "蓝色塑胶步道边的混凝土路缘旁斜靠一块黑色橡胶坡道，上面镂空着涂蓝的汉字。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/17e790b38f3f1a2f8b60a043233e302a.webp",
+        "alt": "木牌写着“蛙类斜坡”，配青蛙彩绘和“无法越过阶梯”“顺利通过”两幅示意图。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/046a244f12b2bb2394e22b02cb5f129c.webp",
+        "alt": "一只东北虎泡在岩石围成的水池里，只露出头和背部，水面映着倒影。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/88e473007469cd39dd8899e11d49cc67.webp",
+        "alt": "池边岩石上摆着一副白色老虎下颌骨，两枚长犬齿向上翘起。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/4d2500ed7c23d262a13edee078522771.webp",
+        "alt": "松软泥土上一个巨大的掌印，中央凹下椭圆形的肉垫痕迹。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/dae1d7a47fd88cf4cf2d4de4df694995.webp",
+        "alt": "木板墙上挂着中英双语牌“耳后白斑的大用处”，左边是张口的老虎线描头像。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/bb1ce671c00542345cc6542aff89e8df.webp",
+        "alt": "灰色钢柱撑起的高架走廊越过树冠，顶部一排钢丝拱架封住通道。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/727eba743ebc0d6bbba5a3c373b930c5.webp",
+        "alt": "一只东北虎走在高架走廊的铁丝网笼里，嘴微张，被从下往上仰拍。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/9757931b6a786d695d0b1f49393df41a.webp",
+        "alt": "穿粉色毛衣的孩子把双手按进木凳上两块青铜色虎掌模型，对比掌形大小。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/4b7779a1648ad6d254de15c969a7115b.webp",
+        "alt": "木板上用绿色手写字写着老虎保护宣传语，右下角画着一只东北虎的头部。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/cd90382023109a8a0300f6de5b0057d1.webp",
+        "alt": "夜色中玄武湖对岸的城市灯火红紫蓝交错，倒影落在黑色水面上。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/9f14abbecfc0274fe15a03c4b9989fad.webp",
+        "alt": "夜色里白色方柱顶端立着红色飘带状雕塑，环形水池的灯带在暗处发亮。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/91015ffaf21acb0bb34d75e201f129f5.webp",
+        "alt": "美龄宫的黄墙和绿琉璃瓦屋檐从高大梧桐间露出，游客沿台阶往上走。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/9764e611a47bc110ace742216d55221c.webp",
+        "alt": "车门厅的绿琉璃瓦屋檐下露出彩绘梁枋，红色立柱撑起，屋脊上立着小兽。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a52731e77417dd36ff397a9e04b365a8.webp",
+        "alt": "车门厅下停着一辆黑色老式轿车，车前挂着“軍 00385”蓝色牌照。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/79a3e3c104bb9c7d9145b3bff46b4ff6.webp",
+        "alt": "仰视黄砖外墙与高大的钢框窗，檐下彩绘斗拱连成一排，旁侧是白石栏露台。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/70c76d15afae3b12c480c8a343eea5ab.webp",
+        "alt": "应接室里深色木门与墨绿窗帘夹着白墙，桌前立着“应接室”中英文说明牌。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/31bf115c4890e93dd90855ce66f0760f.webp",
+        "alt": "人群沿宽阔石阶往上走，梯段旁的墙上挂着一幅竖幅山水画。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/aaf0493924a7a937fe4a6c843e99260a.webp",
+        "alt": "深色木框格栅里露出铸铁暖气片，墙脚镶黑色石条，地面是细密花砖。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/69af44b56fae54c6183efc7933253247.webp",
+        "alt": "长宴桌铺着蕾丝桌布，摆好镶金边的餐盘与花束，壁炉上方挂风景油画。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/207d6b57d546756083caca90e6675306.webp",
+        "alt": "木地板里嵌着黄铜边框的玻璃格，透出下方铸铁网格的地面采暖口。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/d02a6747a53491e63bbfdbce934718a2.webp",
+        "alt": "二楼地面细密的棕白方格马赛克砖，被斜向的窗影切成明暗两半。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/94a9511a1a6bc4dd9728f320038b814c.webp",
+        "alt": "会客厅铺着大片花卉地毯，罩白蕾丝的花布扶手椅对面是窗边一架黑色三角钢琴。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/ab7cf848339b5ae95c3541992714816c.webp",
+        "alt": "两根并列圆柱托起拱券，拱下展板陈列官邸立面图、工程合同和鸟瞰老照片。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/d6bb2d5c07733963731e96c1e317da51.webp",
+        "alt": "展板上标注“建成初期的官邸建筑”的老照片，楼前树木落尽了叶。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/fda07aadf2af8eb04b553a180cd30d5a.webp",
+        "alt": "正面仰拍美龄宫，两层绿琉璃瓦屋檐叠起，檐下彩绘斗拱成排铺开。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/ebed809cda4c09a1611d7aaefc94395d.webp",
+        "alt": "绿琉璃瓦屋檐与红色檩条在墙角翘起，背后是茂密的梧桐树冠。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/0bf2cec9ca15419a557c9930f2afbd96.webp",
+        "alt": "露台汉白玉望柱的柱头雕着凤鸟，整排栏杆与栏板向后退去。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a50f2b986f5c2559e748a07d2d71cb28.webp",
+        "alt": "墙上正中挂着孙中山像，两侧是竖幅对联，上方横匾，前方深色桌上放着电话。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/28c2422d8f29f09c6194092d1a3cae5e.webp",
+        "alt": "机要秘书室里深色木桌配绿罩台灯，侧桌放着打字机，前景立着说明牌。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/af431f466eb67fc4f282a0ef67d97c69.webp",
+        "alt": "墙上挂着一幅深木框的旧中国地图，泛黄纸面印着疆域和底部图例。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a802f4b8fd17b171fa7ba12f2ce0058b.webp",
+        "alt": "俯视一台木壳老式打字机，圆形字盘围满金属杆，按键标着C1与SPACES。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/8b7fefb57f81b102e45ed96e70cb2af2.webp",
+        "alt": "展柜里并排两只老式麦克风，一只架在金属圆环上，一只用白绳吊在灰环中。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/72d9be320df00c803a886f8bcd2f0757.webp",
+        "alt": "蓝色机身的老式放映机装着两盘金属片盘，右边一盘缠着黑色胶片。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/d306fa2c479cd4d9bbe9c170b4710ea2.webp",
+        "alt": "偏蓝灯光下摆着一台黄铜机械装置，立着带辐条的大铜轮，旁边一件小铜器。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/fffb17e70454d5f149cd50e81dd07a22.webp",
+        "alt": "小教堂的木制圣坛上立着十字架与成对烛台，上方挂一幅基督画像，长椅空着。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/74df1ae869804a3e7147e13ab9341abc.webp",
+        "alt": "游客挤在深色木门框外往里张望，门内墙上挂着一幅女性肖像。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/63fec8bea52ffac46df90f37c357e85a.webp",
+        "alt": "私人餐厅的小餐桌铺白色绣花桌布，摆着烛台餐碟，窗边矮柜上放一台老式电风扇。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/772a67e26658f02851f7a657a1349a68.webp",
+        "alt": "侍卫室里深色木条长椅靠墙，窗下立着铸铁暖气片，前景说明牌写着“侍卫室”。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/141e1fa1b37542d9b025e5b0d20f3908.webp",
+        "alt": "标着“秘书卧室”的双语说明牌前，是配木床、衣柜与书桌的值班秘书房间。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/234c939b6402fececdb69a7ef1ce104b.webp",
+        "alt": "秘书办公室内摆着打字机，墙上挂“静”字条幅，窗前垂着灰绿窗帘。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/b8002ad2f4fda27c3b1e9d75bf0c0f66.webp",
+        "alt": "侍卫卧室里沿墙排开多张深色木架单人床，被褥叠得方整，墙面有剥落的痕迹。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/b6573bd565e197b46b55d57993ae6cd4.webp",
+        "alt": "“盥洗间”说明牌前，一排深色木隔断淋浴间上搭着白毛巾。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/dfa811eb7c85ab9d9338cf9169795bb4.webp",
+        "alt": "宋美龄画展的走廊两侧挂满装框水墨山水，顶部轨道灯照明，游客正往里走。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/943f802f75f4630c149488e3694dc5bd.webp",
+        "alt": "厨房里的白瓷砖灶台嵌着铁锅，墙上挂着漏勺，靠墙一排红顶矮凳。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/4ad378c481898c6e23901dc153d699b9.webp",
+        "alt": "备餐室的长木桌上摆满瓷盘、汤盅与成排餐具，窗前墙面贴着白瓷砖。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/b6a8145f8101e7e8adddc385cdd715be.webp",
+        "alt": "洗衣房里白瓷砖水槽上方横着粗大的灰色管道，地上摆着木盆、水桶与矮椅。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a7fae6be2b3e3b8f16b52c7fa78d8867.webp",
+        "alt": "锅炉房里立着灰白色大圆锅炉，黑色铁门与把手，墙面爬满带阀门的铁管。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/c8b47334cc668046300c0cba9c3550ed.webp",
+        "alt": "储煤仓库里堆着一地深色煤块，熏黑的墙面被窗格阳光斜照。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/528d4fb84db743448d158cc0d98c8c9e.webp",
+        "alt": "蓝琉璃瓦顶的博爱牌坊立在雪松之间，石面上浮雕着云纹。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a6fabe0e8bcce9079fef83ac58e736ca.webp",
+        "alt": "透过博爱牌坊的券洞，可见远处蓝琉璃瓦的陵门，近景是成群游客。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/6d8eb86c45c25d3d589674bddcc2229b.webp",
+        "alt": "蓝琉璃瓦陵门开三个拱门洞，门额刻“天下为公”，两列雪松夹着上坡的游客。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/17bc3b1b559382c4c0518549ea839135.webp",
+        "alt": "宽阔的石阶层层向上通向蓝顶祭堂，台阶上挤满向上攀爬的游客。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/4d60dfe699cc6e61cf8d0b2f62385db1.webp",
+        "alt": "铜鼎腹部铭文旁留着明显凹坑与破洞，绿色铜锈斑驳。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/73663c45df8df80a00e7dd7c7fb03abe.webp",
+        "alt": "祭堂正面石匾刻“天地正气”，三个拱门上分列民族、民生、民权。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a85f2792241abcbd4c271b14ccf844f3.webp",
+        "alt": "祭堂侧面以石材雕出的斗拱层层出挑，三角山花上刻满花纹浮雕。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/84551d0473f7771ab27d7270f8973b7c.webp",
+        "alt": "几株老松树干扭曲、树皮深裂，倚在米色石墙前，前景是低矮绿篱。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a97c84f968365742b86301f3e35790d3.webp",
+        "alt": "从祭堂前平台俯瞰，下方广场人群密集，远处是雾霭中的南京城天际线。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/601b97e7ddc04474f15426e0d2949fb9.webp",
+        "alt": "小女孩戴着碎花渔夫帽坐在石阶上，脸被黄色笑脸贴纸遮住。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/0da37eb7e46b582d9f57398eb4851051.webp",
+        "alt": "音乐台的扇形看台上坐满游客，左侧是舞台照壁，暮色云层映着天光。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/81c9b9022ba9d3e76244339e29757a12.webp",
+        "alt": "一只鸽子在鱼鳞状的云层前掠过，前景是深色石栏。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/9b70cea7b8e4cd5dbc6bdb8b22fbdeeb.webp",
+        "alt": "夜色中1912街区的砖砌钟楼被暖光照亮，墙面爬满藤蔓。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/721d8d82954f3c33dac29c12cac413b4.webp",
+        "alt": "夜色下的1912街区砖墙被壁灯打亮，前景是戴白宽檐帽的黑衣人。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/5cff86d11d4ced159397d8ab40fd0414.webp",
+        "alt": "关于1907年南京小铁路的图文展板，配老照片、线路图与手绘铁轨。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/fb7d7861d8ea5f4cf429e5a2d4e394a9.webp",
+        "alt": "街区里的小火车载着乘客沿轨道行驶，末节车厢贴着“3车”标牌。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/e71572de45eefe16f280205ca9862fa8.webp",
+        "alt": "梧桐遮荫的步行街上行人漫步，右侧灰砖店铺挂着“鲜果茶”招牌。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/f85d9c9e9d3b39c430c9571185a8e94c.webp",
+        "alt": "灰砖外墙的圆拱窗上方嵌着回纹边框的米色嵌板，旁边挂圆形店招与彩窗。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/6d1814fd9d1aee0b75d485fefcf00e58.webp",
+        "alt": "主计处的两层灰砖楼，白色立柱与挑檐带阶梯状装饰，二层围着回纹铁栏。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/c6e87ce9e430c971465a7ec4be7f2e6e.webp",
+        "alt": "总统府景区的微缩模型，铜色瓦顶密集排布，左下方是总统府门楼。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/5b1d6bc3b6d360a5341819820fd57dc8.webp",
+        "alt": "总统府正门整面被蓝色施工网与脚手架遮住，前方围着绿色围挡。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/6b6b3b093ceec16912efeeaa17ef4b35.webp",
+        "alt": "门楼上金色“总统府”三字居中，下方并立带涡卷柱头的爱奥尼亚立柱。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/aff63101b1cf89518fcea03b116d278b.webp",
+        "alt": "大堂内红柱撑起密排梁架的屋顶，正前方悬着“天下为公”匾额，两侧挂油画。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/1d77e64e2b239a888bf3d09b32bd5641.webp",
+        "alt": "白墙上的清代传达窗开口罩着玻璃，旁边是黑底“传达窗”说明牌。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/f0072f4e34e381481343a6aff0c87153.webp",
+        "alt": "会客厅里摆着黑色皮沙发与茶几，墙上挂孙中山像和两面民国国旗。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/f4d1d86702a1662c8a91f8697aa593a4.webp",
+        "alt": "蜡像穿着长衫与旗袍围坐交谈，墙上挂着黑白肖像。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/1e9291a9c226707dd9532431119a0157.webp",
+        "alt": "礼堂的深红幕布舞台上悬着孙中山像，台下是菱形拼花地砖。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/f77d7fe42874eb1014e12e2d841b7414.webp",
+        "alt": "从红色的麒麟门望进去，两侧红柱挂满灯笼的走廊通向尽头拱门。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/9ada4bcd9c5b1ec1f8afdb661c4c23c5.webp",
+        "alt": "子超楼黄砖立面简洁方正，中央突起塔楼，门前石阶连着黑色灯柱。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/94abbdcb02d82c94b4186e03f19942cc.webp",
+        "alt": "总统办公室里厚重木墙板包围，书桌上摆着电话与文件，墙上挂着蒋介石军装像。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/c12d36e6250f037b2bd9dd078e9d7ad2.webp",
+        "alt": "副总统办公室里绿呢桌面的书桌上堆着文件，靠窗摆着黄布扶手椅。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/429e7f9025e3df1c75da0fe0b0973e6c.webp",
+        "alt": "子超楼的老式奥的斯电梯，黑色双开门上方装着半圆形楼层指针盘。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/faca5a9ec29e840223d1fe8136e1a15f.webp",
+        "alt": "总统府防空洞入口只是白墙上的一个方洞，里面是昏暗的混凝土台阶。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/05395b8a32e6236056f5e75a521f9098.webp",
+        "alt": "行政院北楼灰色立面上镶着“行政院”三个镀金大字，楼前长方水池倒映着整排窗子。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/516745587f854b084228216cf163c536.webp",
+        "alt": "白墙黛瓦的园墙前叠着太湖石假山，圆形拱门与漏窗透出墙后的景致。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/3b9da80bd75a3c539b209d1e79e68dbf.webp",
+        "alt": "池中一块长满青苔的湖石上生着一株小树，四周是安静的碧绿水面。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/87d964602636bc8e2892cf46d86850b6.webp",
+        "alt": "清式园墙的灰瓦屋顶之外，一座带老虎窗的红瓦洋楼高出墙头。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/bb430c2e92c6dae1f4da99dec42e7cf8.webp",
+        "alt": "天朝宫殿模型，黄琉璃瓦殿宇沿中轴线层层排列，前方是圆形的天父台。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a7022f49ff3dfecb09db25a47a4dc899.webp",
+        "alt": "洪秀全龙椅复制品，金色龙纹屏风上方悬着“太平一统”红底金匾。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/9e48c2097ed20c2b019410f2b5dd5ac9.webp",
+        "alt": "展柜中的浅黄色龙袍通身绣着银线龙纹与云纹，下方摆着配套的冠帽。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/9011f4a469f6592b808f2dbcd2a1d814.webp",
+        "alt": "纸上钤下的方形玉玺印文，朱红汉字密排成行，外框绕着龙凤与海水纹。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/35087ed498fea24ad20750e9f8a61a56.webp",
+        "alt": "白墙上嵌着一枚圆形龙纹浮雕，前景是红柱与红漆格子栏杆。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/e525220410213076f0d7d61bbba73179.webp",
+        "alt": "煦园入口的太湖石假山，石峰嶙峋，卵石铺地前摆着一张石桌。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/7447284de8bf769cf9fd6f4d0c94660e.webp",
+        "alt": "煦园的不系舟石舫泊在池边，白石灰船身托起灰瓦卷棚顶，石桥连着岸。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/3c127f1e9ef28ff58f02521021d8177e.webp",
+        "alt": "煦园狭长的湖面倒映两岸亭台，左侧是夕佳楼，远处可见小拱桥。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/3a68df706080649ed6f00fb282f6760e.webp",
+        "alt": "木构廊檐下并立两通风化严重的石碑，字迹几乎磨平，背后是白墙。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/ccc4bbed1fe3fa30246d5edad2c2e297.webp",
+        "alt": "浅黄色洋楼的白色拱廊与雕花柱头，券门内还能望见一段灰瓦廊道。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/70b1bd7ada16f0a21d679c8bd861235a.webp",
+        "alt": "长条会议桌铺着绿布，对面墙上大幅壁画里，就职人群身后立着三面旗帜。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/54907397d3dcd0e24c594ac05093907c.webp",
+        "alt": "白墙上的五色旗，红黄蓝白黑五条横带自上而下依次排开。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/fd32c00d737f62e552293c143bc8ef57.webp",
+        "alt": "灰砖楼门楣上刻着“孙中山与南京临时政府”，游客正往里走。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/12d41ff8e50a6f327c8f874ba0ebd176.webp",
+        "alt": "胶像复原的就职场景，孙中山着浅色中山装居中，身旁是土黄军装的黄兴。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/f4685c0395d43663c33adbcda320e417.webp",
+        "alt": "池塘对岸的漪澜阁朱红隔扇门紧闭，两峰瘦长的太湖石立在池边。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/819e8086380bbbc8e71752e7094054e6.webp",
+        "alt": "孙中山起居室的深色木构外廊，敞开的玻璃门内可见画像与花瓶。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/713933521e4a260de119f23d64a9ea69.webp",
+        "alt": "小院里的两座西洋石鱼缸，缸身雕着兽面，各自被黑色铁笼罩住。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/7b6245076fe8a0141aefd8922c15260b.webp",
+        "alt": "南京地图上从市中心红圈引出三支箭头，分别指向红山动物园、玄武湖和钟山。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/2ccfdd5e0b19bc3c9ffc1accb36049b4.webp",
+        "alt": "一碗烫干丝，细白干丝堆成小山，浸在深色酱汁里，顶上撒着胡萝卜丁。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a84216c89f07ccd28a38755915f6f2f9.webp",
+        "alt": "切块的金陵烤鸭浸在深色卤汁里，皮色红亮，表面撒着白芝麻。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/cc9bcab3bd895dba013a759c079d6d69.webp",
+        "alt": "米白色的美龄粥盛在碗里，细密米粒浮在豆浆中，一把瓷勺斜插进去。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/b81388f4c8e8455ccbf2fb501aa8f81a.webp",
+        "alt": "砂锅里的响油鳝糊，乌黑油亮的鳝段裹着浓芡，撒满黑胡椒与葱丝。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/213e6e73f8fd379c6bf06909bf4cfffc.webp",
+        "alt": "用餐区中央的评弹表演，两位艺人在暖黄灯笼下弹唱，背景挂着清代人物画像。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/4012c58d635004ea247ea92a35b44999.webp",
+        "alt": "盐水鸭切块摆盘，皮白肉嫩，旁边配着一把水煮花生。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/862ddd7f94fc6a9ffe97b86a7b2a2bdb.webp",
+        "alt": "竹蒸笼里的扣肉糯米饭，油亮糯米上铺着酱色五花肉片，底下垫着荷叶。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/a66602c1b626d2b7a7cae01b8e3cb3c7.webp",
+        "alt": "砂锅里的煮干丝，奶白汤中漂着细白干丝与几片火腿。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/e2c8b1ca17af8804a8d28bf5d3b62450.webp",
+        "alt": "竹蒸笼里的三只烤鸭包，收口敞开露出里面的汤汁。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/da56e4d319f8facbc0337bf3c1eac6d6.webp",
+        "alt": "二层中庭的戏台上两位评弹艺人正在弹唱，四周挂满写字的纸灯笼。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/4ef54272f44ef38d20619720b68a3738.webp",
+        "alt": "从法国梧桐的树冠缝隙仰望晴朗天空，树梢间露出几座高楼。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/e300e7f831f899a685012b557410de6c.webp",
+        "alt": "沿街民宅的白色栏杆阳台层层叠起，底层加了一道绿瓦飞檐，右侧是高大的法国梧桐。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/9fa8b121be5203ae83eaaaab34bdc819.webp",
+        "alt": "灰色拉毛墙面上钉着一块黑漆门牌，白字标着路名和门牌号52。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/eee4fac41a1f49726700fd8d3b8cbb9f.webp",
+        "alt": "地铁站墙上的铜色圆形浮雕，中央刻着中山陵门楼，一个粉衣小孩伸手去摸。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/d645698444797c577b20f01ffb062824.webp",
+        "alt": "客房里一只红漆描金柜，黑色柜门上满绘金线勾边的缠枝花卉。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/39c1e0c83570faae6217677ebb1daf05.webp",
+        "alt": "深色墙面上两只老式拨杆开关，木面板配黄铜拨钮，旁边是现代插座。"
+      },
+      {
+        "src": "https://cdn.victor42.work/posts/2026-11/e3848603646f1ae53ff79d96efc0f82e.webp",
+        "alt": "墙上的南京老地图，玄武湖标在上方，右下角注着“明故宫飞机场”。"
+      }
+    ],
+    "image_count": 211
+  },
+  {
     "slug": "yunhe-terraces-she-township-self-driving-tour",
     "title": "云和梯田畲乡自驾4天4夜",
     "url": "https://victor42.eth.limo/post/yunhe-terraces-she-township-self-driving-tour/",

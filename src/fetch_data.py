@@ -13,6 +13,7 @@ SRC_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(SRC_DIR, "data")
 
 ARTICLES = [
+    "trip-to-nanjing",
     "yunhe-terraces-she-township-self-driving-tour",
     "trip-to-weihai",
     "trip-to-xi-an",
@@ -39,19 +40,24 @@ ALT_FILTER_KEYWORDS = [
     # 图表类型词不依赖措辞组合；副作用排查：2462 条 alt 语料中命中 4 处
     # （1 漏网 + 2 已过滤开支图 + 0 正常照片），零误伤
     "条形图",
+    # 实测漏网变体（2026-11-16 南京游记）："深色表格逐行列出每笔开销…"绕过"开支/账单"系关键词，现有图库 0 误伤
+    "每笔开销",
 ]
 
 
-def read_url(url, timeout=30):
+def read_url(url, timeout=30, retries=3):
     req = urllib.request.Request(url, headers={
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
     })
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.read().decode("utf-8", errors="replace")
-    except Exception as e:
-        print(f"  Error fetching {url}: {e}")
-        return None
+    for attempt in range(1, retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return resp.read().decode("utf-8", errors="replace")
+        except Exception as e:
+            print(f"  Error fetching {url} (attempt {attempt}/{retries}): {e}")
+            if attempt < retries:
+                time.sleep(2 * attempt)
+    return None
 
 
 def extract_section_images(html):
@@ -126,6 +132,17 @@ def filter_images(images):
 
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    output_path = os.path.join(OUTPUT_DIR, "articles.json")
+    cached = {}
+    if os.path.exists(output_path):
+        try:
+            with open(output_path, "r", encoding="utf-8") as f:
+                for item in json.load(f):
+                    if item.get("slug") and item.get("image_count", 0) > 0:
+                        cached[item["slug"]] = item
+        except Exception:
+            pass
+
     results = []
     total_filtered = 0
 
@@ -135,12 +152,16 @@ def main():
 
         html = read_url(url)
         if not html:
-            print(f"  FAILED to fetch")
-            results.append({
-                "slug": slug, "title": slug, "url": url,
-                "date": None, "cover": None, "images": [], "image_count": 0,
-                "error": "fetch_failed"
-            })
+            if slug in cached:
+                print(f"  FAILED to fetch; keeping cached entry ({cached[slug]['image_count']} images)")
+                results.append(cached[slug])
+            else:
+                print(f"  FAILED to fetch")
+                results.append({
+                    "slug": slug, "title": slug, "url": url,
+                    "date": None, "cover": None, "images": [], "image_count": 0,
+                    "error": "fetch_failed"
+                })
             continue
 
         title = extract_title(html) or slug
